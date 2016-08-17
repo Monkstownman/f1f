@@ -1,0 +1,7 @@
+I"p(function() {
+  jQuery(function() {
+    return $('#user_thing_lookups').dataTable();
+  });
+
+}).call(this);
+:ET
