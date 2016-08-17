@@ -1,0 +1,1 @@
+json.partial! "user_thing_lookups/user_thing_lookup", user_thing_lookup: @user_thing_lookup

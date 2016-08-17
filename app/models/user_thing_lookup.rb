@@ -1,0 +1,2 @@
+class UserThingLookup < ApplicationRecord
+end

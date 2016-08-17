@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @measure.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @measure.body %>
+</p>
+
+<p>
+  <strong>Datetime:</strong>
+  <%= @measure.datetime %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @measure.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @measure.value %>
+</p>
+
+<p>
+  <strong>Thing:</strong>
+  <%= @measure.thing %>
+</p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @measure.unit %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @measure.source %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @measure.comment %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @measure.active %>
+</p>
+
+<%= link_to 'Edit', edit_measure_path(@measure) %> |
+<%= link_to 'Back', measures_path %>

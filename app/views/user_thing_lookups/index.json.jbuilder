@@ -1,0 +1,1 @@
+json.array! @user_thing_lookups, partial: 'user_thing_lookups/user_thing_lookup', as: :user_thing_lookup
