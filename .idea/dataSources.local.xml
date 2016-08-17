@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - da7tidufbl430u@ec2-50-17-255-6.compute-1.amazonaws.com" uuid="df1e8f72-b2b6-49b0-9c91-494fa6811375">
+      <secret-storage>master_key</secret-storage>
+      <user-name>djtmzbshfgbsjt</user-name>
+    </data-source>
+    <data-source name="PostgreSQL - f1f_development@localhost" uuid="e1246b75-6136-43b5-bcc0-cefd162b4b07">
+      <secret-storage>master_key</secret-storage>
+      <user-name>johncog</user-name>
+    </data-source>
+  </component>
+</project>

@@ -25,10 +25,10 @@ default: &default
 
 development:
   <<: *default
-  database: db6dj6vpd12cs4
-  username: ksbbubvlgdtiid
-  password: rNU9ucG-s6j1OJLN-fV240evuZ
-  host: ec2-54-243-220-140.compute-1.amazonaws.com
+  database: da7tidufbl430u
+  username: djtmzbshfgbsjt
+  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
+  host: ec2-50-17-255-6.compute-1.amazonaws.com
   port: 5432
   pool: 5
 
@@ -87,9 +87,9 @@ test:
 #
 production:
   <<: *default
-  database: db6dj6vpd12cs4
-  username: ksbbubvlgdtiid
-  password: rNU9ucG-s6j1OJLN-fV240evuZ
-  host: ec2-54-243-220-140.compute-1.amazonaws.com
+  database: da7tidufbl430u
+  username: djtmzbshfgbsjt
+  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
+  host: ec2-50-17-255-6.compute-1.amazonaws.com
   port: 5432
   pool: 20

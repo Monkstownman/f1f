@@ -21,11 +21,12 @@ ActiveRecord::Schema.define(version: 20160815113444) do
     t.datetime "datetime"
     t.text     "name"
     t.text     "value"
-    t.text     "thing"
+    t.text     "thingname"
     t.text     "unit"
     t.text     "source"
     t.text     "comment"
     t.boolean  "active"
+    t.integer  "thing_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -68,8 +69,8 @@ ActiveRecord::Schema.define(version: 20160815113444) do
     t.datetime "invitation_sent_at"
     t.datetime "invitation_accepted_at"
     t.integer  "invitation_limit"
-    t.integer  "invited_by_id"
     t.string   "invited_by_type"
+    t.integer  "invited_by_id"
     t.integer  "invitations_count",      default: 0
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true, using: :btree
