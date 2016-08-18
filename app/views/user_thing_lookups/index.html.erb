@@ -133,7 +133,15 @@
 <br>
 <%= link_to 'New User Thing Lookup', new_user_thing_lookup_path %>
 
+<p>Click the button to display an alert box:</p>
+
+<button onclick="myFunction()">Try it</button>
+
 <script>
+  function myFunction() {
+    alert("I am an alert box!");
+  }
+
   function addRowHandlers() {
     var table = document.getElementById("user_thing_lookups");
     var rows = table.getElementsByTagName("tr");
@@ -145,9 +153,11 @@
             return function() {
               var cell = row.getElementsByTagName("td")[0];
               var id = cell.innerHTML;
-              window.open('measures.7','_self');
-    };
+              alert("id:" + id);
+             // window.open('measures.7','_self');
+            };
           };
+
       currentRow.onclick = createClickHandler(currentRow);
     }
   }
