@@ -15,8 +15,9 @@ gem 'devise_invitable'
 gem 'high_voltage'
 gem 'pg'
 gem 'therubyracer', :platform=>:ruby
-gem 'unicorn'
-gem 'unicorn-rails'
+
+# Use Puma as the app server
+gem 'puma', '~> 3.0'
 
 group :development, :test do
   gem 'byebug'
