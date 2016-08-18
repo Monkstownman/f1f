@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aae35cc8-616f-430f-a951-3d5d47336918" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
     </list>
     <ignored path="f1f.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -469,12 +466,12 @@
       <workItem from="1471460634271" duration="2054000" />
       <workItem from="1471462958532" duration="7586000" />
       <workItem from="1471502054403" duration="332000" />
-      <workItem from="1471502475661" duration="8155000" />
+      <workItem from="1471502475661" duration="8247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27698000" />
+    <option name="totallyTimeSpent" value="27790000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1974" y="21" width="2431" height="1270" extended-state="0" />
