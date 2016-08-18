@@ -132,3 +132,24 @@
 </table>
 <br>
 <%= link_to 'New User Thing Lookup', new_user_thing_lookup_path %>
+
+<script>
+  function addRowHandlers() {
+    var table = document.getElementById("user_thing_lookups");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+      var currentRow = table.rows[i];
+      var createClickHandler =
+          function(row)
+          {
+            return function() {
+              var cell = row.getElementsByTagName("td")[0];
+              var id = cell.innerHTML;
+              window.open('measures.7','_self');
+    };
+          };
+      currentRow.onclick = createClickHandler(currentRow);
+    }
+  }
+  window.onload = addRowHandlers();
+</script>
