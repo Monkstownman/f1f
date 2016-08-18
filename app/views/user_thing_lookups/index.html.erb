@@ -20,6 +20,7 @@
   </thead>
   <tbody>
   <% @user_thing_lookups.each do |user_thing_lookup| %>
+
       <tr>
         <td>
           <%= Thing.find(user_thing_lookup.thing_id).name %>
