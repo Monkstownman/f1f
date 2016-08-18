@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+
+gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'whenever', :require => false
 gem 'bigdecimal'
 gem "highcharts-rails", '4.1.5'

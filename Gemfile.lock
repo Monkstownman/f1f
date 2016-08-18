@@ -39,6 +39,7 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    analytics-ruby (2.0.13)
     arel (7.1.1)
     autoprefixer-rails (6.4.0.2)
       execjs
@@ -328,6 +329,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  analytics-ruby (~> 2.0.0)
   better_errors
   bigdecimal
   bootstrap-sass
