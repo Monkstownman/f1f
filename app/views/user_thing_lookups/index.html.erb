@@ -27,7 +27,7 @@
         </td>
         <% @measures = Measure.where(thingname: Thing.find(user_thing_lookup.thing_id).thingname) %>
         <td>
-          <% @measures.each do |m| %>
+          <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today-4 && name == "ivc_diameter_max" %>
@@ -39,19 +39,19 @@
           <% end %>
         </td>
         <td>
-          <% @measures.each do |m| %>
+          <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today-3 && name == "ivc_diameter_max" %>
                   /<%= @ivc_3_max = m.value %>
               <% elsif date == Date.today-3 && name == "ivc_diameter_min" %>
-                  <%= @ivc_3__min = m.value %>
+                  <%= @ivc_3_min = m.value %>
               <% else %>
               <% end %>
           <% end %>
         </td>
         <td>
-          <% @measures.each do |m| %>
+          <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today-2 && name == "ivc_diameter_max" %>
@@ -63,7 +63,7 @@
           <% end %>
         </td>
         <td>
-          <% @measures.each do |m| %>
+          <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today-1 && name == "ivc_diameter_max" %>
@@ -75,7 +75,7 @@
           <% end %>
         </td>
         <td>
-          <% @measures.each do |m| %>
+          <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today && name == "ivc_diameter_max" %>
@@ -117,12 +117,13 @@
           <% end %>
         </td>
         <td>
-          <% if ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) > ".5".to_f %>
+          <% if ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) > ".5".to_f && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) <= "21".to_f) %>
               <%= "Normal" %>
           <% elsif (((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) < ".5".to_f) && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) <= "21".to_f) %>
               <%= "Intermediate" %>
-          <% else %>
+          <% elsif (((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) < ".5".to_f) && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2)  > "21".to_f) %>
               <%= "High" %>
+          <% else %>
           <% end %>
         </td>
         <td><%= link_to 'Measures', measures_path(user_thing_lookup) %></td>
@@ -154,7 +155,7 @@
               var cell = row.getElementsByTagName("td")[0];
               var id = cell.innerHTML;
               alert("id:" + id);
-             // window.open('measures.7','_self');
+              // window.open('measures.7','_self');
             };
           };
 
