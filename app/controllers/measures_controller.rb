@@ -1,4 +1,5 @@
 class MeasuresController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_measure, only: [:show, :edit, :update, :destroy]
 
   # GET /measures
@@ -28,7 +29,7 @@ class MeasuresController < ApplicationController
     @measures = @measures.where(active: true).where(thingname: thingname).order(:datetime)
 
     Analytics.track(
-        user_id: current_user_id,
+        user_id: current_user.id,
         event: 'Viewed Measures',
         properties: { thingname: thingname})
 
