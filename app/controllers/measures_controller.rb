@@ -27,13 +27,14 @@ class MeasuresController < ApplicationController
     thing_id = UserThingLookup.find(user_thing_lookup_id).thing_id
     thingname = @things.find(thing_id).thingname.to_s
     @measures = @measures.where(active: true).where(thingname: thingname).order(:datetime)
-    user_email = current_user.email
 
     Analytics.track(
         user_id: user.id,
         event: 'Viewed Measures',
-        properties: { thingname: thingname}, {user_email: user_email)
-
+        properties: {
+            thingname: thingname,
+            user_email: current_user.email
+        })
     # Remove measures which are inactive
     @measures.all.each do |measure|
       @subject = measure.title
