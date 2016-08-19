@@ -33,7 +33,8 @@ class MeasuresController < ApplicationController
         event: 'Viewed Measures',
         properties: {
             thingname: thingname,
-            user_email: current_user.email
+            user_email: current_user.email,
+            datetime: DateTime.now
         })
     # Remove measures which are inactive
     @measures.all.each do |measure|
