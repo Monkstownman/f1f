@@ -1,6 +1,6 @@
 Warden::Manager.after_set_user except: :fetch do |user, auth, opts|
   Analytics.identify(
       user_id: user.id,
-      traits: { email: "#{ user.email }", friends: 872 },
-      context: {ip: '8.8.8.8'})
+      user_name: user.name,
+      traits: { email: "#{ user.email }"} )
 end

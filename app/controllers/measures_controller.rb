@@ -29,8 +29,8 @@ class MeasuresController < ApplicationController
     @measures = @measures.where(active: true).where(thingname: thingname).order(:datetime)
 
     Analytics.track(
-        user_id: current_user.id,
-        event: 'Viewed Measures',
+        user_email: current_user.email,
+        event: 'Viewing Measures',
         properties: { thingname: thingname})
 
     # Remove measures which are inactive
