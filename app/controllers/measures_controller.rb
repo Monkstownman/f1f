@@ -29,7 +29,7 @@ class MeasuresController < ApplicationController
     @measures = @measures.where(active: true).where(thingname: thingname).order(:datetime)
 
     Analytics.track(
-        user_id: user.id,
+        user_id: current_user.id,
         event: 'Viewed Measures',
         properties: {
             thingname: thingname,
