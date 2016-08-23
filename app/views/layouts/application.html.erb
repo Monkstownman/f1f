@@ -1,556 +1,591 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "F1f" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "F1f" %>">
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-    <%= csrf_meta_tags %>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "F1f" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "F1f" %>">
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
 
-    <style media="screen" type="text/css">
-      #containerIVC,
-      #containerWeight {
-        float:left;
-      }
-    </style>
+  <style media="screen" type="text/css">
+    #containerIVC,
+    #containerWeight {
+      float: left;
+    }
+  </style>
 
-    <script type="text/javascript">
+  <script type="text/javascript">
 
-      !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+    !function () {
+      var analytics = window.analytics = window.analytics || [];
+      if (!analytics.initialize)if (analytics.invoked)window.console && console.error && console.error("Segment snippet included twice."); else {
+        analytics.invoked = !0;
+        analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "page", "once", "off", "on"];
+        analytics.factory = function (t) {
+          return function () {
+            var e = Array.prototype.slice.call(arguments);
+            e.unshift(t);
+            analytics.push(e);
+            return analytics
+          }
+        };
+        for (var t = 0; t < analytics.methods.length; t++) {
+          var e = analytics.methods[t];
+          analytics[e] = analytics.factory(e)
+        }
+        analytics.load = function (t) {
+          var e = document.createElement("script");
+          e.type = "text/javascript";
+          e.async = !0;
+          e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+          var n = document.getElementsByTagName("script")[0];
+          n.parentNode.insertBefore(e, n)
+        };
+        analytics.SNIPPET_VERSION = "3.1.0";
         analytics.load("ojD4Qs5TITfThg6Hur0iQeh9mqsp7dtM");
         analytics.page()
-      }}();
+      }
+    }();
 
 
-      $(function () {
+    $(function () {
 
-        $('#containerIVC').highcharts({
-          chart: {
-            type: 'spline'
+      $('#containerIVC').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'IVC'
+        },
+        xAxis: [{
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
           },
           title: {
-            text: 'IVC'
+            text: 'Date'
+          }
+        }],
+        yAxis: [{
+          title: {
+            text: 'mm'
           },
-          xAxis:[ {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-            title: {
-              text: 'Date'
-            }
-          }],
-          yAxis:[ {
-            title: {
-              text: 'mm'
-            },
-            min: 0,
-            max: 30,
-
-          }, { // Secondary yAxis
           min: 0,
-            max: 100,
-              title: {
+          max: 30,
+
+        }, { // Secondary yAxis
+          min: 0,
+          max: 100,
+          title: {
             text: 'IVC %',
-                opposite: true
-            },
+
+            style: {
+              color: Highcharts.getOptions().colors[0]
+            }
+          },
+          labels: {
+            format: '{value}',
+            style: {
+              color: Highcharts.getOptions().colors[0]
+            }
+          },
+          opposite: true
         }
         ],
         legend: {
-            enabled: false
-          },
-          plotOptions: {
-            spline: {
-              marker: {
-                enabled: true
-              }
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
             }
+          }
+        },
+        series: [
+          {
+            name: 'IVC Diameter Max',
+            data: <%= raw @seriesIVCDiameterMaxStr%>,
+            yAxis: 0
           },
-          series: [
-            {
-              name: 'IVC Diameter Max',
-              data: <%= raw @seriesIVCDiameterMaxStr%>,
-              yAxis: 0
-            },
-            {
-              name: 'IVC Diameter Min',
-              data: <%= raw @seriesIVCDiameterMinStr%>,
-              yAxis: 0
-            },
-            {
-              name: 'IVC',
-              data: <%= raw @seriesIVCStr%>,
-              yAxis: 1
-            }
-          ]
-        });
+          {
+            name: 'IVC Diameter Min',
+            data: <%= raw @seriesIVCDiameterMinStr%>,
+            yAxis: 0
+          },
+          {
+            name: 'IVC',
+            data: <%= raw @seriesIVCStr%>,
+            yAxis: 1
+          }
+        ]
+      });
 
-        $('#containerTemperature').highcharts({
-          chart: {
-            type: 'spline'
+      $('#containerTemperature').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'Temperature'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
           },
           title: {
-            text: 'Temperature'
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'celsius'
           },
-          xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-            },
-            title: {
-              text: 'Date'
-            }
-          },
-          yAxis: {
-            title: {
-              text: 'celsius'
-            },
-            min: 0,
-            plotLines: [{
-              id: 'goal',
-              color: '#FF0000',
-              dashStyle: 'ShortDash',
-              width: 2,
-              value: 88.1,
-              zIndex: 0
-            }]
-          },
-          legend: {
-            enabled: false
-          },
-          plotOptions: {
-            spline: {
-              marker: {
-                enabled: true
-              }
-            }
-          },
-          series: [{
-            name: 'Temperature',
-            data: <%= raw @seriesTemperatureStr%>
+          min: 0,
+          plotLines: [{
+            id: 'goal',
+            color: '#FF0000',
+            dashStyle: 'ShortDash',
+            width: 2,
+            value: 88.1,
+            zIndex: 0
           }]
-        });
-        $('#containerF1F').highcharts({
-          chart: {
-            type: 'spline'
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
+            }
+          }
+        },
+        series: [{
+          name: 'Temperature',
+          data: <%= raw @seriesTemperatureStr%>
+        }]
+      });
+      $('#containerF1F').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'IVC Collapsibility'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
           },
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
           title: {
             text: 'IVC Collapsibility'
           },
-          xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-            title: {
-              text: 'Date'
-            }
-          },
-          yAxis: {
-            title: {
-              text: 'IVC Collapsibility'
-            },
-            min: 0,
-            max: 1,
-            plotLines: [{
-              id: 'goal',
-              color: '#FF0000',
-              dashStyle: 'ShortDash',
-              width: 2,
-              value: 88.1,
-              zIndex: 0
-            }]
-          },
-          legend: {
-            enabled: false
-          },
-          plotOptions: {
-            spline: {
-              marker: {
-                enabled: true
-              }
-            }
-          },
-          series: [{
-            name: 'F1F',
-            data: <%= raw @seriesF1FStr%>
-
+          min: 0,
+          max: 1,
+          plotLines: [{
+            id: 'goal',
+            color: '#FF0000',
+            dashStyle: 'ShortDash',
+            width: 2,
+            value: 88.1,
+            zIndex: 0
           }]
-        });
-
-        $('#containerOpenAndClosed').highcharts({
-          chart: {
-            type: 'spline'
-          },
-          title: {
-            text: 'Open Closed Door'
-          },
-          xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-            title: {
-              text: 'Date'
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
             }
-          },
-          yAxis: {
-            title: {
-              text: 'binary'
-            },
-            min: 0,
-            plotLines: [{
-              id: 'goal',
-              color: '#FF0000',
-              dashStyle: 'ShortDash',
-              width: 2,
-              value: 88.1,
-              zIndex: 0
-            }]
-          },
-          legend: {
-            enabled: false
-          },
-          plotOptions: {
-            spline: {
-              marker: {
-                enabled: true
-              }
-            }
-          },
-          series: [{
-            name: 'Open And Closed',
-            data: <%= raw @seriesOpenAndClosedStr%>
-          }]
-        });
-
-        $('#containerMotion').highcharts({
-          chart: {
-            type: 'column'
-          },
-          title: {
-            text: 'Motion'
-          },
-          xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-            title: {
-              text: 'Date'
-            }
-          },
-          yAxis: {
-            title: {
-              text: 'binary'
-            },
-            min: 0
-          },
-          legend: {
-            align: 'right',
-            x: -30,
-            verticalAlign: 'top',
-            y: 25,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-            borderColor: '#CCC',
-            borderWidth: 1,
-            shadow: false
-          },
-          plotOptions: {
-            column: {
-              stacking: 'normal',
-              dataLabels: {
-                enabled: false,
-                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                style: {
-                  textShadow: '0 0 3px black'
-                }
-              }
-            }
-          },
-          series: [
-            {
-              name: 'Motion',
-              data: <%= raw @seriesMotionStr%>
-            }
-          ]
-        });
-
-        $('#containerWeight').highcharts({
-          chart: {
-            type: 'spline'
-          },
-          title: {
-            text: 'Weight'
-          },
-          xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-            title: {
-              text: 'Date'
-            }
-          },
-          yAxis: {
-            title: {
-              text: 'kg'
-            },
-            min: 80,
-            plotLines: [{
-              id: 'goal',
-              color: '#FF0000',
-              dashStyle: 'ShortDash',
-              width: 2,
-              value: 88.1,
-              zIndex: 0
-            }]
-          },
-          legend: {
-            enabled: false
-          },
-          plotOptions: {
-            spline: {
-              marker: {
-                enabled: true
-              }
-            }
-          },
-          series: [{
-            name: 'Weight',
-            data: <%= raw @seriesWeightStr%>
-          }]
-        });
-
-        $('#containerHeartRate').highcharts({
-          chart: {
-            type: 'spline'
-          },
-          title: {
-            text: 'Heart Rate'
-          },
-          xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-            title: {
-              text: 'Date'
-            }
-          },
-          yAxis: {
-            title: {
-              text: 'bpm'
-            },
-            min: 40
-          },
-          legend: {
-            enabled: false
-          },
-          plotOptions: {
-            spline: {
-              marker: {
-                enabled: true
-              }
-            }
-          },
-          series: [{
-            name: 'Heart Rate',
-            data: <%= raw @seriesHeartRateStr%>
-          }]
-        });
-
-
-        $('#containerBloodPressure').highcharts({
-          chart: {
-            type: 'spline'
-          },
-          title: {
-            text: 'Blood Pressure'
-          },
-          xAxis: {
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-            title: {
-              text: 'Date'
-            }
-          },
-          yAxis: {
-            title: {
-              text: 'mmHg'
-            },
-            min: 50,
-            plotLines: [{
-              id: 'systolicNormal',
-              color: '#FF0000',
-              dashStyle: 'ShortDash',
-              width: 2,
-              value: 135,
-              zIndex: 0
-            }, {
-              id: 'dystolicNormal',
-              color: '#FF0000',
-              dashStyle: 'ShortDash',
-              width: 2,
-              value: 85,
-              zIndex: 0
-            }]
-          },
-          legend: {
-            enabled: false
-          },
-          plotOptions: {
-            spline: {
-              marker: {
-                enabled: true
-              }
-            }
-          },
-          series: [
-            {
-              name: 'Systolic',
-              data: <%= raw @seriesSystolicBloodPressureStr%>
-            },
-            {
-              name: 'Diastolic',
-              data: <%= raw @seriesDiastolicBloodPressureStr%>
-            }
-          ]
-        });
-
-        $('#containerREMLightDeep').highcharts({
-
-          chart: {
-            zoonType: 'xy'
-          },
-          title: {
-            text: 'Total Sleep and Sleep Score'
-          },
-          xAxis: [{
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              month: '%b',
-              year: '%b'
-            },
-          }],
-          yAxis: [{ // Primary yAxis
-
-            title: {
-              text: 'Total Sleep hour',
-              style: {
-                color: Highcharts.getOptions().colors[1]
-              }
-            },
-            min: 0,
-            type: 'datetime',
-            dateTimeLabelFormats: { // don't display the dummy year
-              second: '%H:%M',
-              minute: '%H:%M',
-              hour: '%H:%M',
-              day: '%H:%M',
-              week: '%H:%M',
-              month: '%H:%M',
-              year: '%H:%M'
-            },
-            stackLabels: {
-              enabled: false,
-              style: {
-                fontWeight: 'bold',
-                color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-              }
-            }
-          }, { // Secondary yAxis
-            min: 0,
-            max: 100,
-            title: {
-              text: 'Sleep Score %',
-              style: {
-                color: Highcharts.getOptions().colors[0]
-              }
-            },
-            labels: {
-              format: '{value}',
-              style: {
-                color: Highcharts.getOptions().colors[0]
-              }
-            },
-            opposite: true
           }
-          ],
-          legend: {
-            align: 'vertical',
-            x: 120,
-            verticalAlign: 'top',
-            y: 100,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
-            borderColor: '#CCC',
-            borderWidth: 1,
-            shadow: false
+        },
+        series: [{
+          name: 'F1F',
+          data: <%= raw @seriesF1FStr%>
+
+        }]
+      });
+
+      $('#containerOpenAndClosed').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'Open Closed Door'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
           },
-          plotOptions: {
-            column: {
-              stacking: 'normal',
-              dataLabels: {
-                enabled: false,
-                color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                style: {
-                  textShadow: '0 0 3px black'
-                }
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'binary'
+          },
+          min: 0,
+          plotLines: [{
+            id: 'goal',
+            color: '#FF0000',
+            dashStyle: 'ShortDash',
+            width: 2,
+            value: 88.1,
+            zIndex: 0
+          }]
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
+            }
+          }
+        },
+        series: [{
+          name: 'Open And Closed',
+          data: <%= raw @seriesOpenAndClosedStr%>
+        }]
+      });
+
+      $('#containerMotion').highcharts({
+        chart: {
+          type: 'column'
+        },
+        title: {
+          text: 'Motion'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
+          },
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'binary'
+          },
+          min: 0
+        },
+        legend: {
+          align: 'right',
+          x: -30,
+          verticalAlign: 'top',
+          y: 25,
+          floating: true,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+          borderColor: '#CCC',
+          borderWidth: 1,
+          shadow: false
+        },
+        plotOptions: {
+          column: {
+            stacking: 'normal',
+            dataLabels: {
+              enabled: false,
+              color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+              style: {
+                textShadow: '0 0 3px black'
               }
             }
+          }
+        },
+        series: [
+          {
+            name: 'Motion',
+            data: <%= raw @seriesMotionStr%>
+          }
+        ]
+      });
+
+      $('#containerWeight').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'Weight'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
           },
-          series: [
-            {
-              type: 'column',
-              name: 'REM',
-              data: <%= raw @seriesREMStr%>,
-              yAxis: 0
-            },
-            {
-              type: 'column',
-              name: 'Light',
-              data: <%= raw @seriesLightStr%>,
-              yAxis: 0
-            },
-            {
-              type: 'column',
-              name: 'Deep',
-              data: <%= raw @seriesDeepStr%>,
-              yAxis: 0
-            },
-            {
-              type: 'spline',
-              name: 'Sleep Score',
-              data: <%= raw @seriesSleepScoreStr%>,
-              yAxis: 1
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'kg'
+          },
+          min: 80,
+          plotLines: [{
+            id: 'goal',
+            color: '#FF0000',
+            dashStyle: 'ShortDash',
+            width: 2,
+            value: 88.1,
+            zIndex: 0
+          }]
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
             }
-          ]
-        });
-      })
-    </script>
+          }
+        },
+        series: [{
+          name: 'Weight',
+          data: <%= raw @seriesWeightStr%>
+        }]
+      });
+
+      $('#containerHeartRate').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'Heart Rate'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
+          },
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'bpm'
+          },
+          min: 40
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
+            }
+          }
+        },
+        series: [{
+          name: 'Heart Rate',
+          data: <%= raw @seriesHeartRateStr%>
+        }]
+      });
 
 
+      $('#containerBloodPressure').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'Blood Pressure'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
+          },
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'mmHg'
+          },
+          min: 50,
+          plotLines: [{
+            id: 'systolicNormal',
+            color: '#FF0000',
+            dashStyle: 'ShortDash',
+            width: 2,
+            value: 135,
+            zIndex: 0
+          }, {
+            id: 'dystolicNormal',
+            color: '#FF0000',
+            dashStyle: 'ShortDash',
+            width: 2,
+            value: 85,
+            zIndex: 0
+          }]
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
+            }
+          }
+        },
+        series: [
+          {
+            name: 'Systolic',
+            data: <%= raw @seriesSystolicBloodPressureStr%>
+          },
+          {
+            name: 'Diastolic',
+            data: <%= raw @seriesDiastolicBloodPressureStr%>
+          }
+        ]
+      });
 
-  </head>
-  <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-  </body>
+      $('#containerREMLightDeep').highcharts({
+
+        chart: {
+          zoonType: 'xy'
+        },
+        title: {
+          text: 'Total Sleep and Sleep Score'
+        },
+        xAxis: [{
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
+          },
+        }],
+        yAxis: [{ // Primary yAxis
+
+          title: {
+            text: 'Total Sleep hour',
+            style: {
+              color: Highcharts.getOptions().colors[1]
+            }
+          },
+          min: 0,
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            second: '%H:%M',
+            minute: '%H:%M',
+            hour: '%H:%M',
+            day: '%H:%M',
+            week: '%H:%M',
+            month: '%H:%M',
+            year: '%H:%M'
+          },
+          stackLabels: {
+            enabled: false,
+            style: {
+              fontWeight: 'bold',
+              color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+            }
+          }
+        }, { // Secondary yAxis
+          min: 0,
+          max: 100,
+          title: {
+            text: 'Sleep Score %',
+            style: {
+              color: Highcharts.getOptions().colors[0]
+            }
+          },
+          labels: {
+            format: '{value}',
+            style: {
+              color: Highcharts.getOptions().colors[0]
+            }
+          },
+          opposite: true
+        }
+        ],
+        legend: {
+          align: 'vertical',
+          x: 120,
+          verticalAlign: 'top',
+          y: 100,
+          floating: true,
+          backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+          borderColor: '#CCC',
+          borderWidth: 1,
+          shadow: false
+        },
+        plotOptions: {
+          column: {
+            stacking: 'normal',
+            dataLabels: {
+              enabled: false,
+              color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+              style: {
+                textShadow: '0 0 3px black'
+              }
+            }
+          }
+        },
+        series: [
+          {
+            type: 'column',
+            name: 'REM',
+            data: <%= raw @seriesREMStr%>,
+            yAxis: 0
+          },
+          {
+            type: 'column',
+            name: 'Light',
+            data: <%= raw @seriesLightStr%>,
+            yAxis: 0
+          },
+          {
+            type: 'column',
+            name: 'Deep',
+            data: <%= raw @seriesDeepStr%>,
+            yAxis: 0
+          },
+          {
+            type: 'spline',
+            name: 'Sleep Score',
+            data: <%= raw @seriesSleepScoreStr%>,
+            yAxis: 1
+          }
+        ]
+      });
+    })
+  </script>
+
+
+</head>
+<body>
+<header>
+  <%= render 'layouts/navigation' %>
+</header>
+<main role="main">
+  <%= render 'layouts/messages' %>
+  <%= yield %>
+</main>
+</body>
 </html>

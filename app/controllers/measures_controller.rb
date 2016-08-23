@@ -235,8 +235,6 @@ class MeasuresController < ApplicationController
     #Calculated measures
     @seriesIVCStr = @seriesIVCStr.gsub(/.{1}$/, '')
     @seriesIVCStr = @seriesIVCStr + "]"
-
-    byebug
   end
 
   # GET /measures/1
