@@ -36,6 +36,7 @@ class MeasuresController < ApplicationController
             user_email: current_user.email,
             datetime: DateTime.now
         })
+
     # Remove measures which are inactive
     @measures.all.each do |measure|
       @subject = measure.title
