@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'sprockets-rails'
+
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'whenever', :require => false
 gem 'bigdecimal'
@@ -33,8 +35,9 @@ group :assets do
   gem 'sass-rails', '~> 5.0'
   gem 'coffee-rails', '~> 4.1.0'
   gem 'uglifier', '>= 1.3.0'
-  gem 'jquery-datatables-rails'#, github: 'rweng/jquery-datatables-rails'
   gem 'jquery-ui-rails'
+  gem 'jquery-datatables-rails'#, github: 'rweng/jquery-datatables-rails'
+
 end
 
 group :development do

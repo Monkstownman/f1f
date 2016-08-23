@@ -14,8 +14,3 @@
 //= require jquery_ujs
 //= require jquery.dataTables
 //= require_tree .
-
-var table = $('#user_thing_lookups').DataTable();
-$('#user_thing_lookups tbody').on('click', 'tr', function () {
-    console.log(table.row(this).data());
-});

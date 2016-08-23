@@ -3,6 +3,7 @@
 <table id="user_thing_lookups" class="display" cellspacing="0" width="100%">
   <thead>
   <tr>
+    <th style="display:none">Sort</th>
     <th>Patient</th>
     <th>IVC <br><br><%= (Date.today-4).strftime("%d") %></th>
     <th><br><br><%= (Date.today-3).strftime("%d") %></th>
@@ -20,12 +21,39 @@
   </thead>
   <tbody>
   <% @user_thing_lookups.each do |user_thing_lookup| %>
-
       <tr>
+        <td style="display:none">
+          <% @measures = Measure.where(thingname: Thing.find(user_thing_lookup.thing_id).thingname) %>
+
+          <% @measures.order(:value).each do |m| %>
+              <% date = m.datetime.to_date %>
+              <% name = m.name %>
+              <% if date == Date.today && name == "ivc_diameter_max" %>
+                  <% @ivc_today_max = m.value %><br>
+              <% elsif date == Date.today && name == "ivc_diameter_min" %>
+              <% else %>
+              <% end %>
+          <% end %>
+          <% @measures.order(:value).each do |m| %>
+              <% date = m.datetime.to_date %>
+              <% name = m.name %>
+              <% if date == Date.today && name == "ivc_diameter_max" %>
+              <% elsif date == Date.today && name == "ivc_diameter_min" %>
+                  <% @ivc_today_min = m.value %>
+              <% else %>
+              <% end %>
+          <% end %>
+
+          <% if @ivc_today_max.to_f == 0.to_f %>
+          <% else %>
+              <%= sprintf('%.2f', ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f)*100) %>
+          <% end %>
+        </td>
+
         <td>
           <b><%= Thing.find(user_thing_lookup.thing_id).name %></b>
         </td>
-        <% @measures = Measure.where(thingname: Thing.find(user_thing_lookup.thing_id).thingname) %>
+
         <td>
           <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
@@ -168,7 +196,7 @@
           <% else %>
           <% end %>
         </td>
-        <td style="display:none"><%= Thing.find(user_thing_lookup.thing_id).id%></td>
+        <td style="display:none" ><%= Thing.find(user_thing_lookup.thing_id).id%></td>
       </tr>
   <% end %>
   </tbody>
@@ -186,7 +214,7 @@
           function(row)
           {
             return function() {
-              var cell = row.getElementsByTagName("td")[12];
+              var cell = row.getElementsByTagName("td")[13];
               var id = cell.innerHTML;
               window.open('measures.'+ id,'_self');
             };
@@ -194,5 +222,7 @@
       currentRow.onclick = createClickHandler(currentRow);
     }
   }
+
+
   window.onload = addRowHandlers();
 </script>
