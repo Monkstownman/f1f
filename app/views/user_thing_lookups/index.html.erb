@@ -52,12 +52,11 @@
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today-3 && name == "ivc_diameter_max" %>
-                  <%= @ivc_3_max = m.value %>
+                  <%= @ivc_3_max = m.value %><br>
               <% elsif date == Date.today-3 && name == "ivc_diameter_min" %>
               <% else %>
               <% end %>
           <% end %>
-        </td>
         <% @measures.order(:value).each do |m| %>
             <% date = m.datetime.to_date %>
             <% name = m.name %>
@@ -73,13 +72,11 @@
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today-2 && name == "ivc_diameter_max" %>
-                  <%= @ivc_2_max = m.value %>
+                  <%= @ivc_2_max = m.value %><br>
               <% elsif date == Date.today-2 && name == "ivc_diameter_min" %>
               <% else %>
               <% end %>
           <% end %>
-        </td>
-        <td>
           <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
@@ -95,13 +92,11 @@
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today-1 && name == "ivc_diameter_max" %>
-                  /<%= @ivc_yesterday_max = m.value %>
+                  <%= @ivc_yesterday_max = m.value %><br>
               <% elsif date == Date.today-1 && name == "ivc_diameter_min" %>
               <% else %>
               <% end %>
           <% end %>
-        </td>
-        <td>
           <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
@@ -117,13 +112,11 @@
               <% date = m.datetime.to_date %>
               <% name = m.name %>
               <% if date == Date.today && name == "ivc_diameter_max" %>
-                  <%= @ivc_today_max = m.value %>
+                  <%= @ivc_today_max = m.value %><br>
               <% elsif date == Date.today && name == "ivc_diameter_min" %>
               <% else %>
               <% end %>
           <% end %>
-        </td>
-        <td>
           <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
               <% name = m.name %>
