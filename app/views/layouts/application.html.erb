@@ -32,7 +32,7 @@
           title: {
             text: 'IVC'
           },
-          xAxis: {
+          xAxis:[ {
             type: 'datetime',
             dateTimeLabelFormats: { // don't display the dummy year
               month: '%b',
@@ -41,16 +41,24 @@
             title: {
               text: 'Date'
             }
-          },
-          yAxis: {
+          }],
+          yAxis:[ {
             title: {
               text: 'mm'
             },
             min: 0,
             max: 30,
 
-          },
-          legend: {
+          }, { // Secondary yAxis
+          min: 0,
+            max: 100,
+              title: {
+            text: 'IVC %',
+                opposite: true
+            },
+        }
+        ],
+        legend: {
             enabled: false
           },
           plotOptions: {
@@ -63,11 +71,18 @@
           series: [
             {
               name: 'IVC Diameter Max',
-              data: <%= raw @seriesIVCDiameterMaxStr%>
+              data: <%= raw @seriesIVCDiameterMaxStr%>,
+              yAxis: 0
             },
             {
               name: 'IVC Diameter Min',
-              data: <%= raw @seriesIVCDiameterMinStr%>
+              data: <%= raw @seriesIVCDiameterMinStr%>,
+              yAxis: 0
+            },
+            {
+              name: 'IVC',
+              data: <%= raw @seriesIVCStr%>,
+              yAxis: 1
             }
           ]
         });

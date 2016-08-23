@@ -22,6 +22,8 @@ class MeasuresController < ApplicationController
     @seriesMotionStr = "[ "
     @seriesTemperatureStr = "[ "
 
+    #Calcuated measures
+    @seriesIVCStr = "[ "
     user_thing_lookup_id = request.original_url.split('/measures.')[1].to_i
     @things = Thing.all
     thing_id = UserThingLookup.find(user_thing_lookup_id).thing_id
@@ -41,6 +43,8 @@ class MeasuresController < ApplicationController
     @measures.all.each do |measure|
       @subject = measure.title
       @comment = measure.comment
+      @corresponding_comment = ""
+
       @id = measure.id
       unless @subject.include? "Invalid"
         @subjectJSON = JSON.parse(@subject.to_s)
@@ -57,12 +61,25 @@ class MeasuresController < ApplicationController
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_max"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
+          @corresponding_ivc_diameter_min = @measures.where(active: true).where(name: "ivc_diameter_min" ).where(datetime: @datetime).first
+          @corresponding_subject = @corresponding_ivc_diameter_min.title
+          @corresponding_subjectJSON = JSON.parse(@corresponding_subject.to_s)
+          @corresponding_value = @corresponding_subjectJSON["measures"][0]["value"]
           if (@comment.to_s.blank? == false)
             @commentPresent = 8
           else
             @commentPresent = 4
           end
           @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+
+          @ivc_value = (@value.to_f - @corresponding_value.to_f) / @value.to_f*100
+
+          @seriesIVCStr = @seriesIVCStr +  "{name: '" + @corresponding_comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @ivc_value.to_i.to_s + "   },"
+
+
+
+
+
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_min"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
@@ -80,7 +97,7 @@ class MeasuresController < ApplicationController
           else
             @commentPresent = 4
           end
-          @seriesSystolicBloodPressureStr = @seriesSystolicBloodPressureStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+          @seriesSystolicBloodPressureStr = @seriesSystolicBloodPressureStr + "{name: '" + '' + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
         elsif @subjectJSON["measures"][0]["name"] == "Diastolic Blood Pressure"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
@@ -214,6 +231,12 @@ class MeasuresController < ApplicationController
     @seriesMotionStr = @seriesMotionStr + "]"
     @seriesTemperatureStr = @seriesTemperatureStr.gsub(/.{1}$/, '')
     @seriesTemperatureStr = @seriesTemperatureStr + "]"
+
+    #Calculated measures
+    @seriesIVCStr = @seriesIVCStr.gsub(/.{1}$/, '')
+    @seriesIVCStr = @seriesIVCStr + "]"
+
+    byebug
   end
 
   # GET /measures/1
