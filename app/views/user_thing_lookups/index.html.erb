@@ -15,7 +15,7 @@
     <th><br><br>Y</th>
     <th><br><br>T</th>
     <th><br>Grade <br>RAP</th>
-    <th colspan="1"></th>
+    <th style="display:none" colspan="1">ID</th>
   </tr>
   </thead>
   <tbody>
@@ -168,14 +168,13 @@
           <% else %>
           <% end %>
         </td>
-        <td><%= link_to 'Measures', measures_path(user_thing_lookup) %></td>
+        <td style="display:none"><%= Thing.find(user_thing_lookup.thing_id).id%></td>
       </tr>
   <% end %>
   </tbody>
 </table>
 <br>
 <%= link_to 'New User Thing Lookup', new_user_thing_lookup_path %>
-
 
 <script>
   function addRowHandlers() {
@@ -187,13 +186,11 @@
           function(row)
           {
             return function() {
-              var cell = row.getElementsByTagName("td")[0];
+              var cell = row.getElementsByTagName("td")[12];
               var id = cell.innerHTML;
-              alert("id:" + id);
-              //window.open('measures.7','_self');
+              window.open('measures.'+ id,'_self');
             };
           };
-
       currentRow.onclick = createClickHandler(currentRow);
     }
   }
