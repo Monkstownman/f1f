@@ -210,6 +210,7 @@
     var rows = table.getElementsByTagName("tr");
     for (i = 0; i < rows.length; i++) {
       var currentRow = table.rows[i];
+
       var createClickHandler =
           function(row)
           {
@@ -223,6 +224,32 @@
     }
   }
 
+  function colourRow(){
+    var table = document.getElementById("user_thing_lookups");
+    var rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+      var currentRow = table.rows[i];
+      var  x = currentRow.cells[13].innerHTML;
+
+      var onLoadHandler =
+          function (row)
+          {
+           // var cell = row.getElementsByTagName("td")[13].i;
+           // var id = cell.valueOf();
+            var id4 = 45;
+            if (x  > 18) {
+              row.style.backgroundColor = "#EEF4EA";
+            }
+
+              return function () {
+
+             };
+      };
+      currentRow.onload = onLoadHandler(currentRow);
+    }
+  };
 
   window.onload = addRowHandlers();
+  window.onload = colourRow();
+
 </script>
