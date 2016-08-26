@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'newrelic_rpm'
 gem 'sprockets-rails'
 
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
