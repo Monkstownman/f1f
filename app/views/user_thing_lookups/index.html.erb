@@ -209,7 +209,7 @@
                    @measure.source = 'ivc_max_alert'
                    @measure.active = true
                    @measure.save %>
-                  <%= "Intermediate alert created" %>
+                  <%= "Intermediate" %>
               <% elsif !Measure.where(name: 'acknowledgement').where(value: @ivc_today_title).first.nil? %>
                   <%= "Intermediate " %>
               <% else %>
@@ -245,12 +245,6 @@
           };
       currentRow.onclick = createClickHandler(currentRow);
     }
-  }
-
-  function acknowledgement() {
-    <% @measure = Measure.new %>
-    <% @measure.title = 'test10' %>
-    <% @measure.save %>
   }
 
   function colourRow() {
