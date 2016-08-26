@@ -82,16 +82,22 @@ class MeasuresController < ApplicationController
             @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
           elsif @status == 1
             @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {fillColor: '#00FF00', radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+            @measure = Measure.new
+            @measure.title = '{ "measures": [ { "name":"acknowledgement","time":"' + DateTime.now.to_s + '","value":"place_holder","user":"ivc_max_alert" } ] }'
+            @measure.body = ''
+            @measure.datetime = DateTime.now.to_s
+            @measure.name = 'acknowledgement'
+            @measure.value = measure.title
+            @measure.thingname = thingname
+            @measure.unit = 'title'
+            @measure.source = current_user.email
+            @measure.active = true
+            @measure.save
           else
             @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {fillColor: '#FF0000', radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
           end
           @ivc_value = (@value.to_f - @corresponding_value.to_f) / @value.to_f*100
           @seriesIVCStr = @seriesIVCStr + "{name: '" + @corresponding_comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @ivc_value.to_i.to_s + "   },"
-
-
-
-
-
 
 
 
@@ -314,6 +320,6 @@ class MeasuresController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def measure_params
-    params.require(:measure).permit(:title, :body, :datetime, :name, :value, :thing, :unit, :source, :comment, :active)
+    params.require(:measure).permit(:title, :body, :datetime, :name, :value, :thingname, :unit, :source, :comment, :active)
   end
 end
