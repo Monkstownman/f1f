@@ -49,13 +49,12 @@
               <%= sprintf('%.2f', ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f)*100) %>
           <% end %>
         </td>
-
         <td>
           <b><%= Thing.find(user_thing_lookup.thing_id).name %></b>
           <% @ivc_today_min = 0 %>
           <% @ivc_today_max = 0 %>
           <% @ivc_yesterday_min = 0 %>
-          <% @ivc_yesterday__max = 0 %>
+          <% @ivc_yesterday_max = 0 %>
           <% @ivc_2_min = 0 %>
           <% @ivc_2_max = 0 %>
           <% @ivc_3_min = 0 %>
@@ -63,7 +62,6 @@
           <% @ivc_4_min = 0 %>
           <% @ivc_4_max = 0 %>
         </td>
-
         <td>
           <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
@@ -84,7 +82,6 @@
               <% end %>
           <% end %>
         </td>
-
         <td>
           <% @measures.order(:value).each do |m| %>
               <% date = m.datetime.to_date %>
@@ -151,6 +148,7 @@
               <% name = m.name %>
               <% if date == Date.today && name == "ivc_diameter_max" %>
                   <%= @ivc_today_max = m.value %><br>
+                  <% @ivc_today_title = m.title %>
               <% elsif date == Date.today && name == "ivc_diameter_min" %>
               <% else %>
               <% end %>
@@ -165,7 +163,6 @@
               <% end %>
           <% end %>
         </td>
-
         <td>
           <% if @ivc_4_max.to_f == 0.to_f %>
           <% else %>
@@ -200,7 +197,24 @@
           <% if ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) > ".5".to_f && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) <= "21".to_f) %>
               <%= "Normal" %>
           <% elsif (((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) < ".5".to_f) && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) <= "21".to_f) %>
-              <%= "Intermediate" %>
+              <% if Measure.where(name: 'alert').where(value: @ivc_today_title).first.nil?
+                   @measure = Measure.new
+                   @measure.title = '{ "measures": [ { "name":"alert","time":"' + DateTime.now.to_s + '","value":"place_holder","user":"ivc_max_alert" } ] }'
+                   @measure.body = ''
+                   @measure.datetime = DateTime.now.to_s
+                   @measure.name = 'alert'
+                   @measure.value = @ivc_today_title
+                   @measure.thingname = Thing.find(user_thing_lookup.thing_id).thingname
+                   @measure.unit = 'title'
+                   @measure.source = 'ivc_max_alert'
+                   @measure.active = true
+                   @measure.save %>
+                  <%= "Intermediate alert created" %>
+              <% elsif !Measure.where(name: 'acknowledgment').where(value: @ivc_today_title).first.nil? %>
+                  <%= "Intermediate acknowledged" %>
+              <% else %>
+                  <%= "Intermediate" %>
+              <% end %>
           <% elsif (((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) < ".5".to_f) && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) > "21".to_f) %>
               <%= "High" %>
           <% else %>
@@ -215,23 +229,30 @@
 <%= link_to 'New User Thing Lookup', new_user_thing_lookup_path %>
 
 <script>
+
   function addRowHandlers() {
     var table = document.getElementById("user_thing_lookups");
     var rows = table.getElementsByTagName("tr");
     for (i = 0; i < rows.length; i++) {
       var currentRow = table.rows[i];
-
       var createClickHandler =
           function (row) {
             return function () {
               var cell = row.getElementsByTagName("td")[13];
               var id = cell.innerHTML;
-              window.open('measures.' + id, '_self');
+              myWindow = window.open('measures.' + id, '_self');
             };
           };
       currentRow.onclick = createClickHandler(currentRow);
     }
   }
+
+  function acknowledgement() {
+    <% @measure = Measure.new %>
+    <% @measure.title = 'test10' %>
+    <% @measure.save %>
+  }
+
   function colourRow() {
     var table = document.getElementById("user_thing_lookups");
     var rows = table.getElementsByTagName("tr");
@@ -239,28 +260,22 @@
       var currentRow = table.rows[i];
       var x = currentRow.cells[12].innerHTML;
       var y = currentRow.cells[6].innerHTML;
-
-
       var onLoadHandler =
           function (row) {
-
             if (y.indexOf("T") !== -1) {
             } else if (y.indexOf("<") == -1) {
               row.style.backgroundColor = "#FFC200";
-            } else if (x.indexOf("Intermediate") !== -1) {
+              // Add alert
+            } else if ((x.indexOf("Intermediate") !== -1) && (1 == 1 )) {
               row.style.backgroundColor = "#FF0000";
             } else {
             }
-
             return function () {
             };
-
-
           };
       currentRow.onload = onLoadHandler(currentRow);
     }
-  }
-  ;
+  };
 
   window.onload = addRowHandlers();
   window.onload = colourRow();

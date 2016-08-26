@@ -44,7 +44,7 @@ class MeasuresController < ApplicationController
       @subject = measure.title
       @comment = measure.comment
       @corresponding_comment = ""
-
+      @status = 0
       @id = measure.id
       unless @subject.include? "Invalid"
         @subjectJSON = JSON.parse(@subject.to_s)
@@ -58,10 +58,12 @@ class MeasuresController < ApplicationController
             @commentPresent = 4
           end
           @seriesWeightStr = @seriesWeightStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+
+
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_max"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
-          @corresponding_ivc_diameter_min = @measures.where(active: true).where(name: "ivc_diameter_min" ).where(datetime: @datetime).first
+          @corresponding_ivc_diameter_min = @measures.where(active: true).where(name: "ivc_diameter_min").where(datetime: @datetime).first
           @corresponding_subject = @corresponding_ivc_diameter_min.title
           @corresponding_subjectJSON = JSON.parse(@corresponding_subject.to_s)
           @corresponding_value = @corresponding_subjectJSON["measures"][0]["value"]
@@ -70,11 +72,24 @@ class MeasuresController < ApplicationController
           else
             @commentPresent = 4
           end
-          @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
-
+          if !@measures.where(name: 'alert').where(value: measure.title).first.nil?
+            @status = 1
+          end
+          if !@measures.where(name: 'acknowledgement').where(value: measure.title).first.nil?
+             @status = 2
+           end
+          if @status == 0
+            @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+          elsif @status == 1
+            @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {fillColor: '#00FF00', radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+          else
+            @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {fillColor: '#FF0000', radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+          end
           @ivc_value = (@value.to_f - @corresponding_value.to_f) / @value.to_f*100
+          @seriesIVCStr = @seriesIVCStr + "{name: '" + @corresponding_comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @ivc_value.to_i.to_s + "   },"
 
-          @seriesIVCStr = @seriesIVCStr +  "{name: '" + @corresponding_comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @ivc_value.to_i.to_s + "   },"
+
+
 
 
 
