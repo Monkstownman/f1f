@@ -210,7 +210,7 @@
                    @measure.active = true
                    @measure.save %>
                   <%= "Intermediate alert created" %>
-              <% elsif !Measure.where(name: 'acknowledgment').where(value: @ivc_today_title).first.nil? %>
+              <% elsif !Measure.where(name: 'acknowledgement').where(value: @ivc_today_title).first.nil? %>
                   <%= "Intermediate acknowledged" %>
               <% else %>
                   <%= "Intermediate" %>
