@@ -170,13 +170,13 @@
           <% end %>
         </td>
         <td>
-          <% if @ivc_4_max.to_f == 0.to_f %>
+          <% if @ivc_3_max.to_f == 0.to_f %>
           <% else %>
               <%= sprintf('%.2f', ((@ivc_3_max.to_f - @ivc_3_min.to_f)/@ivc_3_max.to_f)*100) %>
           <% end %>
         </td>
         <td>
-          <% if @ivc_4_max.to_f == 0.to_f %>
+          <% if @ivc_2_max.to_f == 0.to_f %>
           <% else %>
               <%= sprintf('%.2f', ((@ivc_2_max.to_f - @ivc_2_min.to_f)/@ivc_2_max.to_f)*100) %>
           <% end %>
@@ -211,7 +211,7 @@
                    @measure.save %>
                   <%= "Intermediate alert created" %>
               <% elsif !Measure.where(name: 'acknowledgement').where(value: @ivc_today_title).first.nil? %>
-                  <%= "Intermediate acknowledged" %>
+                  <%= "Intermediate " %>
               <% else %>
                   <%= "Intermediate" %>
               <% end %>
@@ -265,8 +265,8 @@
             if (y.indexOf("T") !== -1) {
             } else if (y.indexOf("<") == -1) {
               row.style.backgroundColor = "#FFC200";
-            } else if ((x.indexOf("Intermediate acknowledged") !== -1) && (1 == 1 )) {
-            } else if ((x.indexOf("Intermediate") !== -1) && (1 == 1 )) {
+            } else if (x.indexOf("Intermediate ") !== -1) {
+            } else if (x.indexOf("Intermediate") !== -1) {
               row.style.backgroundColor = "#FF0000";
             } else {
             }
