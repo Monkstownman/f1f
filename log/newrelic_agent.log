@@ -110,3 +110,5 @@
 [2016-08-26 20:02:41 +0100 johncog-XPS-8700 (8065)] INFO : Doing deferred dependency-detection before Rack startup
 [2016-08-26 20:02:43 +0100 johncog-XPS-8700 (8065)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1136986/applications/22396914
 [2016-08-26 20:07:47 +0100 johncog-XPS-8700 (8065)] INFO : Starting Agent shutdown
+[2016-08-27 12:47:10 +0100 johncog-XPS-8700 (5641)] ERROR : 1 error(s) running task for event 'report_event_data' in Agent Event Loop:
+[2016-08-27 12:47:10 +0100 johncog-XPS-8700 (5641)] ERROR : NewRelic::Agent::ServerConnectionException: Recoverable error connecting to collector-136.newrelic.com:443 after 20.01219523 seconds: Failed to open TCP connection to collector-136.newrelic.com:443 (getaddrinfo: Name or service not known)
