@@ -630,3 +630,25 @@
 [2016-08-31 21:17:47 +0100 johncog-XPS-8700 (23549)] INFO : Doing deferred dependency-detection before Rack startup
 [2016-08-31 21:17:49 +0100 johncog-XPS-8700 (23549)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1413288/applications/29589296
 [2016-08-31 21:17:50 +0100 johncog-XPS-8700 (23549)] INFO : Starting Agent shutdown
+[2016-08-31 21:22:45 +0100 johncog-XPS-8700 (24993)] INFO : Starting the New Relic agent in "development" environment.
+[2016-08-31 21:22:45 +0100 johncog-XPS-8700 (24993)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-08-31 21:22:45 +0100 johncog-XPS-8700 (24993)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/johnacogan@gmail.com/f1f)
+[2016-08-31 21:22:45 +0100 johncog-XPS-8700 (24993)] INFO : New Relic Agent Developer Mode enabled.
+[2016-08-31 21:22:45 +0100 johncog-XPS-8700 (24993)] INFO : Environment: development
+[2016-08-31 21:22:45 +0100 johncog-XPS-8700 (24993)] INFO : No known dispatcher detected.
+[2016-08-31 21:22:45 +0100 johncog-XPS-8700 (24993)] INFO : Application: My Application (Development)
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing ActiveJob instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing Net instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing Rails 4 Error instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing Rails 4 Controller instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Installing Rails 4 view instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Finished instrumentation
+[2016-08-31 21:22:46 +0100 johncog-XPS-8700 (24993)] INFO : Doing deferred dependency-detection before Rack startup
+[2016-08-31 21:22:48 +0100 johncog-XPS-8700 (24993)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1413288/applications/29589296
+[2016-08-31 21:23:18 +0100 johncog-XPS-8700 (24993)] INFO : Starting Agent shutdown
