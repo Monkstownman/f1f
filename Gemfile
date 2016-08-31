@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
-
 gem 'newrelic_rpm'
 gem 'sprockets-rails'
 
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'whenever', :require => false
-gem 'bigdecimal'
+#gem 'bigdecimal'
 gem "highcharts-rails", '4.1.5'
 gem 'google-api-client'
 gem 'rails', '>= 5.0.0.racecar1', '< 5.1'
