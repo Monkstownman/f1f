@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'newrelic_rpm'
 gem 'sprockets-rails'
 gem 'bundler-1.12.5'
+gem 'bigdecimal-1.2.7'
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'whenever', :require => false
 gem 'bigdecimal'
