@@ -325,6 +325,7 @@ DEPENDENCIES
   better_errors
   bigdecimal
   bootstrap-sass
+  bundler
   byebug
   capybara
   coffee-rails (~> 4.1.0)
