@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aae35cc8-616f-430f-a951-3d5d47336918" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/f1f.iml" afterPath="$PROJECT_DIR$/.idea/f1f.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.bundle/config" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="f1f.iws" />
@@ -492,12 +491,12 @@
       <workItem from="1472656949584" duration="946000" />
       <workItem from="1472658063564" duration="432000" />
       <workItem from="1472659671982" duration="6554000" />
-      <workItem from="1472672367377" duration="4094000" />
+      <workItem from="1472672367377" duration="4168000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164045000" />
+    <option name="totallyTimeSpent" value="164119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2034" y="123" width="2554" height="1284" extended-state="0" />
@@ -541,7 +540,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/24e0c18f/df1e8f72-b2b6-49b0-9c91-494fa6811375/da7tidufbl430u.public.measures" />
     <entry file="dbDummy://dbtable:/24e0c18f/df1e8f72-b2b6-49b0-9c91-494fa6811375/da7tidufbl430u.public.measures" />
     <entry file="dbDummy://dbtable:/24e0c18f/df1e8f72-b2b6-49b0-9c91-494fa6811375/da7tidufbl430u.public.measures" />
     <entry file="dbDummy://dbtable:/24e0c18f/df1e8f72-b2b6-49b0-9c91-494fa6811375/da7tidufbl430u.public.measures" />
@@ -750,6 +748,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.bundle/config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
