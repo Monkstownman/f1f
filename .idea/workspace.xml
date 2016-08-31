@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aae35cc8-616f-430f-a951-3d5d47336918" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="f1f.iws" />
@@ -491,12 +489,12 @@
       <workItem from="1472656949584" duration="946000" />
       <workItem from="1472658063564" duration="432000" />
       <workItem from="1472659671982" duration="6554000" />
-      <workItem from="1472672367377" duration="3564000" />
+      <workItem from="1472672367377" duration="3637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163515000" />
+    <option name="totallyTimeSpent" value="163588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="2562" height="1440" extended-state="6" />

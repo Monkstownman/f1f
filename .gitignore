@@ -4,3 +4,7 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 .bundle/
+.elasticbeanstalk/
+tmp/pids/
+tmp/sessions/
+tmp/sockets/
