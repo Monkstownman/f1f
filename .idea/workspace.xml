@@ -94,8 +94,8 @@
       <file leaf-file-name="Gemfile.lock" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile.lock">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="127" column="17" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="17" />
+            <state relative-caret-position="704">
+              <caret line="368" column="9" selection-start-line="368" selection-start-column="9" selection-end-line="368" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -502,12 +502,12 @@
       <workItem from="1472656949584" duration="946000" />
       <workItem from="1472658063564" duration="432000" />
       <workItem from="1472659671982" duration="6554000" />
-      <workItem from="1472672367377" duration="5235000" />
+      <workItem from="1472672367377" duration="5310000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165186000" />
+    <option name="totallyTimeSpent" value="165261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2110" y="122" width="2554" height="1284" extended-state="0" />
@@ -780,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="127" column="17" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="17" />
+        <state relative-caret-position="704">
+          <caret line="368" column="9" selection-start-line="368" selection-start-column="9" selection-end-line="368" selection-end-column="9" />
           <folding />
         </state>
       </provider>
