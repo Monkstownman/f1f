@@ -339,7 +339,7 @@
           title: {
             text: 'kg'
           },
-          min: 80,
+          min: 50,
           plotLines: [{
             id: 'goal',
             color: '#FF0000',
@@ -362,6 +362,53 @@
         series: [{
           name: 'Weight',
           data: <%= raw @seriesWeightStr%>
+        }]
+      });
+
+      $('#containerPAP').highcharts({
+        chart: {
+          type: 'spline'
+        },
+        title: {
+          text: 'PAP'
+        },
+        xAxis: {
+          type: 'datetime',
+          dateTimeLabelFormats: { // don't display the dummy year
+            month: '%b',
+            year: '%b'
+          },
+          title: {
+            text: 'Date'
+          }
+        },
+        yAxis: {
+          title: {
+            text: 'mmHg'
+          },
+          min: 0,
+          plotLines: [{
+            id: 'goal',
+            color: '#FF0000',
+            dashStyle: 'ShortDash',
+            width: 2,
+            value: 88.1,
+            zIndex: 0
+          }]
+        },
+        legend: {
+          enabled: false
+        },
+        plotOptions: {
+          spline: {
+            marker: {
+              enabled: true
+            }
+          }
+        },
+        series: [{
+          name: 'PAP',
+          data: <%= raw @seriesPAPStr%>
         }]
       });
 

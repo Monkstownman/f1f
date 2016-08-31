@@ -8,6 +8,7 @@ class MeasuresController < ApplicationController
     @measures = Measure.all
 
     @seriesWeightStr = "[ "
+    @seriesPAPStr = "[ "
     @seriesSystolicBloodPressureStr = "[ "
     @seriesDiastolicBloodPressureStr = "[ "
     @seriesIVCDiameterMaxStr = "[ "
@@ -49,7 +50,7 @@ class MeasuresController < ApplicationController
       unless @subject.include? "Invalid"
         @subjectJSON = JSON.parse(@subject.to_s)
         @seriesPartStr = ""
-        if @subjectJSON["measures"][0]["name"] == "Weight"
+        if @subjectJSON["measures"][0]["name"] == "Weight" || @subjectJSON["measures"][0]["name"] == "weight"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
           if (@comment.to_s.blank? == false)
@@ -58,8 +59,15 @@ class MeasuresController < ApplicationController
             @commentPresent = 4
           end
           @seriesWeightStr = @seriesWeightStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
-
-
+        elsif @subjectJSON["measures"][0]["name"] == "pap"
+          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
+          @value = @subjectJSON["measures"][0]["value"]
+          if (@comment.to_s.blank? == false)
+            @commentPresent = 8
+          else
+            @commentPresent = 4
+          end
+          @seriesPAPStr = @seriesPAPStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_max"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
@@ -76,8 +84,8 @@ class MeasuresController < ApplicationController
             @status = 1
           end
           if !@measures.where(name: 'acknowledgement').where(value: measure.title).first.nil?
-             @status = 2
-           end
+            @status = 2
+          end
           if @status == 0
             @seriesIVCDiameterMaxStr = @seriesIVCDiameterMaxStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
           elsif @status == 1
@@ -98,7 +106,6 @@ class MeasuresController < ApplicationController
           end
           @ivc_value = (@value.to_f - @corresponding_value.to_f) / @value.to_f*100
           @seriesIVCStr = @seriesIVCStr + "{name: '" + @corresponding_comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @ivc_value.to_i.to_s + "   },"
-
 
 
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_min"
@@ -226,6 +233,8 @@ class MeasuresController < ApplicationController
     # Remove last , from string
     @seriesWeightStr = @seriesWeightStr.gsub(/.{1}$/, '')
     @seriesWeightStr = @seriesWeightStr + "]"
+    @seriesPAPStr = @seriesPAPStr.gsub(/.{1}$/, '')
+    @seriesPAPStr = @seriesPAPStr + "]"
     @seriesSystolicBloodPressureStr = @seriesSystolicBloodPressureStr.gsub(/.{1}$/, '')
     @seriesSystolicBloodPressureStr = @seriesSystolicBloodPressureStr + "]"
     @seriesDiastolicBloodPressureStr = @seriesDiastolicBloodPressureStr.gsub(/.{1}$/, '')
