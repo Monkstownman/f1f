@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 
 #ruby "2.2.4"
+gem 'bundler'
 gem 'newrelic_rpm'
 gem 'sprockets-rails'
-gem 'bundler'
 gem 'analytics-ruby', '~> 2.0.0', :require => 'segment/analytics'
 gem 'whenever', :require => false
 gem 'bigdecimal'
