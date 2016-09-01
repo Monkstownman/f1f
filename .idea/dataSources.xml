@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="899035524">
+  <component name="DataSourceManagerImpl" format="xml" hash="114691574">
     <data-source source="LOCAL" name="PostgreSQL - da7tidufbl430u@ec2-50-17-255-6.compute-1.amazonaws.com" uuid="df1e8f72-b2b6-49b0-9c91-494fa6811375">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
@@ -18,16 +18,6 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/f1f_development</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="fire1foundry-development_heroku" uuid="62767e80-847a-4d0e-b3c4-d2beacf4a9b6">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://ec2-23-21-234-218.compute-1.amazonaws.com:5432/d3nip374udq6gm</jdbc-url>
-      <driver-properties>
-        <property name="ssl" value="true" />
-        <property name="sslfactory" value="org.postgresql.ssl.NonValidatingFactory" />
-      </driver-properties>
-    </data-source>
-    <data-source source="LOCAL" name="fire1foundry-development_heroku [2]" uuid="4579d0e2-731d-48a6-9b10-51d6e51a5962">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

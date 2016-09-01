@@ -16,10 +16,6 @@
     <data-source name="fire1foundry-development_heroku" uuid="62767e80-847a-4d0e-b3c4-d2beacf4a9b6">
       <secret-storage>master_key</secret-storage>
       <user-name>qcdqehtbytnekt</user-name>
-    </data-source>
-    <data-source name="fire1foundry-development_heroku [2]" uuid="4579d0e2-731d-48a6-9b10-51d6e51a5962">
-      <secret-storage>master_key</secret-storage>
-      <user-name>qcdqehtbytnekt</user-name>
       <schema-pattern>d3nip374udq6gm.pg_catalog d3nip374udq6gm.public</schema-pattern>
       <default-schemas>d3nip374udq6gm.public</default-schemas>
     </data-source>

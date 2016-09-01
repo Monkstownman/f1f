@@ -1,0 +1,188 @@
+I, [2016-09-01T09:29:12.811941 #20695]  INFO -- : Started GET "/users" for 127.0.0.1 at 2016-09-01 09:29:12 +0100
+I, [2016-09-01T09:29:12.818148 #20695]  INFO -- : Processing by UsersController#index as HTML
+I, [2016-09-01T09:29:12.830685 #20695]  INFO -- : Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms)
+I, [2016-09-01T09:29:12.843051 #20695]  INFO -- : Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-01 09:29:12 +0100
+I, [2016-09-01T09:29:12.844187 #20695]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2016-09-01T09:29:12.862030 #20695]  INFO -- :   Rendering devise/sessions/new.html.erb within layouts/application
+I, [2016-09-01T09:29:12.864059 #20695]  INFO -- :   Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+I, [2016-09-01T09:29:12.866650 #20695]  INFO -- :   Rendered layouts/_nav_links_for_auth.html.erb (0.5ms)
+I, [2016-09-01T09:29:12.866716 #20695]  INFO -- :   Rendered layouts/_navigation.html.erb (1.1ms)
+I, [2016-09-01T09:29:12.867353 #20695]  INFO -- :   Rendered layouts/_messages.html.erb (0.3ms)
+I, [2016-09-01T09:29:12.867567 #20695]  INFO -- : Completed 200 OK in 23ms (Views: 7.2ms | ActiveRecord: 2.7ms)
+I, [2016-09-01T09:29:12.877777 #20695]  INFO -- : Started GET "/assets/application-3b18eabce9dfd42615d0db841a1ccdda9abf8ca09a4d79205194b06ea494748c.css" for 127.0.0.1 at 2016-09-01 09:29:12 +0100
+F, [2016-09-01T09:29:12.879251 #20695] FATAL -- :   
+F, [2016-09-01T09:29:12.879347 #20695] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-3b18eabce9dfd42615d0db841a1ccdda9abf8ca09a4d79205194b06ea494748c.css"):
+F, [2016-09-01T09:29:12.879378 #20695] FATAL -- :   
+F, [2016-09-01T09:29:12.879407 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+F, [2016-09-01T09:29:12.879419 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879429 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+F, [2016-09-01T09:29:12.879438 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879447 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+F, [2016-09-01T09:29:12.879459 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+F, [2016-09-01T09:29:12.879469 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+F, [2016-09-01T09:29:12.879478 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+F, [2016-09-01T09:29:12.879486 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+F, [2016-09-01T09:29:12.879495 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+F, [2016-09-01T09:29:12.879504 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879523 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+F, [2016-09-01T09:29:12.879541 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879552 #20695] FATAL -- : rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+F, [2016-09-01T09:29:12.879561 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879580 #20695] FATAL -- : rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+F, [2016-09-01T09:29:12.879589 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879597 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+F, [2016-09-01T09:29:12.879606 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879619 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+F, [2016-09-01T09:29:12.879640 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879660 #20695] FATAL -- : rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+F, [2016-09-01T09:29:12.879669 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879678 #20695] FATAL -- : railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+F, [2016-09-01T09:29:12.879708 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.879722 #20695] FATAL -- : puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+F, [2016-09-01T09:29:12.879731 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+F, [2016-09-01T09:29:12.879740 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+F, [2016-09-01T09:29:12.879748 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+F, [2016-09-01T09:29:12.879757 #20695] FATAL -- : puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+I, [2016-09-01T09:29:12.884312 #20695]  INFO -- : Started GET "/assets/application-89c2824d123c52a77e2ea57444f9bda8e014876d9f5d5a93e66fb3b888ab7371.js" for 127.0.0.1 at 2016-09-01 09:29:12 +0100
+F, [2016-09-01T09:29:12.885071 #20695] FATAL -- :   
+F, [2016-09-01T09:29:12.885108 #20695] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-89c2824d123c52a77e2ea57444f9bda8e014876d9f5d5a93e66fb3b888ab7371.js"):
+F, [2016-09-01T09:29:12.885126 #20695] FATAL -- :   
+F, [2016-09-01T09:29:12.885138 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+F, [2016-09-01T09:29:12.885148 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885157 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+F, [2016-09-01T09:29:12.885166 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885175 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+F, [2016-09-01T09:29:12.885183 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+F, [2016-09-01T09:29:12.885192 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+F, [2016-09-01T09:29:12.885203 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+F, [2016-09-01T09:29:12.885211 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+F, [2016-09-01T09:29:12.885220 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+F, [2016-09-01T09:29:12.885228 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885237 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+F, [2016-09-01T09:29:12.885245 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885254 #20695] FATAL -- : rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+F, [2016-09-01T09:29:12.885262 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885273 #20695] FATAL -- : rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+F, [2016-09-01T09:29:12.885281 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885296 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+F, [2016-09-01T09:29:12.885305 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885314 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+F, [2016-09-01T09:29:12.885323 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885331 #20695] FATAL -- : rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+F, [2016-09-01T09:29:12.885341 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885350 #20695] FATAL -- : railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+F, [2016-09-01T09:29:12.885360 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:12.885410 #20695] FATAL -- : puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+F, [2016-09-01T09:29:12.885422 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+F, [2016-09-01T09:29:12.885431 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+F, [2016-09-01T09:29:12.885439 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+F, [2016-09-01T09:29:12.885448 #20695] FATAL -- : puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+I, [2016-09-01T09:29:32.006225 #20695]  INFO -- : Started POST "/users/sign_in" for 127.0.0.1 at 2016-09-01 09:29:32 +0100
+I, [2016-09-01T09:29:32.007618 #20695]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2016-09-01T09:29:32.007693 #20695]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"fI+3r+wxRLDkJxOMpnUMfIUlOT7K4qAhOrTNPHoq3hzkGgRTMk+kJf4FguX8gBB5k+y6oyoLtjvWGMvrdCIeNg==", "user"=>{"email"=>"johnacogan@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+D, [2016-09-01T09:29:32.015648 #20695] DEBUG -- :   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "johnacogan@gmail.com"], ["LIMIT", 1]]
+D, [2016-09-01T09:29:32.126684 #20695] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2016-09-01T09:29:32.129701 #20695] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-09-01 08:29:32 UTC], ["last_sign_in_at", 2016-09-01 08:03:51 UTC], ["sign_in_count", 3], ["updated_at", 2016-09-01 08:29:32 UTC], ["id", 1]]
+D, [2016-09-01T09:29:32.145287 #20695] DEBUG -- :   [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+I, [2016-09-01T09:29:32.147624 #20695]  INFO -- : Redirected to http://localhost:3000/users
+I, [2016-09-01T09:29:32.147718 #20695]  INFO -- : Completed 302 Found in 140ms (ActiveRecord: 16.6ms)
+I, [2016-09-01T09:29:32.150502 #20695]  INFO -- : Started GET "/users" for 127.0.0.1 at 2016-09-01 09:29:32 +0100
+I, [2016-09-01T09:29:32.151114 #20695]  INFO -- : Processing by UsersController#index as HTML
+D, [2016-09-01T09:29:32.153109 #20695] DEBUG -- :   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2016-09-01T09:29:32.153775 #20695]  INFO -- : Redirected to http://localhost:3000/users/sign_in
+I, [2016-09-01T09:29:32.153871 #20695]  INFO -- : Filter chain halted as :admin_only rendered or redirected
+I, [2016-09-01T09:29:32.153942 #20695]  INFO -- : Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+I, [2016-09-01T09:29:32.156410 #20695]  INFO -- : Started GET "/users/sign_in" for 127.0.0.1 at 2016-09-01 09:29:32 +0100
+I, [2016-09-01T09:29:32.156990 #20695]  INFO -- : Processing by Devise::SessionsController#new as HTML
+D, [2016-09-01T09:29:32.158023 #20695] DEBUG -- :   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2016-09-01T09:29:32.158623 #20695]  INFO -- : Redirected to http://localhost:3000/
+I, [2016-09-01T09:29:32.158676 #20695]  INFO -- : Filter chain halted as :require_no_authentication rendered or redirected
+I, [2016-09-01T09:29:32.158757 #20695]  INFO -- : Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+I, [2016-09-01T09:29:32.161147 #20695]  INFO -- : Started GET "/" for 127.0.0.1 at 2016-09-01 09:29:32 +0100
+I, [2016-09-01T09:29:32.161984 #20695]  INFO -- : Processing by UserThingLookupsController#index as HTML
+D, [2016-09-01T09:29:32.162985 #20695] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2016-09-01T09:29:32.164758 #20695]  INFO -- :   Rendering user_thing_lookups/index.html.erb within layouts/application
+D, [2016-09-01T09:29:32.168195 #20695] DEBUG -- :   [1m[36mUserThingLookup Load (0.2ms)[0m  [1m[34mSELECT "user_thing_lookups".* FROM "user_thing_lookups" WHERE "user_thing_lookups"."user_id" = 1[0m
+I, [2016-09-01T09:29:32.168487 #20695]  INFO -- :   Rendered user_thing_lookups/index.html.erb within layouts/application (3.7ms)
+I, [2016-09-01T09:29:32.169326 #20695]  INFO -- :   Rendered layouts/_nav_links_for_auth.html.erb (0.1ms)
+I, [2016-09-01T09:29:32.169386 #20695]  INFO -- :   Rendered layouts/_navigation.html.erb (0.3ms)
+I, [2016-09-01T09:29:32.169565 #20695]  INFO -- :   Rendered layouts/_messages.html.erb (0.1ms)
+I, [2016-09-01T09:29:32.169781 #20695]  INFO -- : Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.3ms)
+I, [2016-09-01T09:29:32.178187 #20695]  INFO -- : Started GET "/assets/application-3b18eabce9dfd42615d0db841a1ccdda9abf8ca09a4d79205194b06ea494748c.css" for 127.0.0.1 at 2016-09-01 09:29:32 +0100
+I, [2016-09-01T09:29:32.178356 #20695]  INFO -- : Started GET "/assets/application-89c2824d123c52a77e2ea57444f9bda8e014876d9f5d5a93e66fb3b888ab7371.js" for 127.0.0.1 at 2016-09-01 09:29:32 +0100
+F, [2016-09-01T09:29:32.179470 #20695] FATAL -- :   
+F, [2016-09-01T09:29:32.180325 #20695] FATAL -- :   
+F, [2016-09-01T09:29:32.180402 #20695] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-3b18eabce9dfd42615d0db841a1ccdda9abf8ca09a4d79205194b06ea494748c.css"):
+F, [2016-09-01T09:29:32.180453 #20695] FATAL -- : ActionController::RoutingError (No route matches [GET] "/assets/application-89c2824d123c52a77e2ea57444f9bda8e014876d9f5d5a93e66fb3b888ab7371.js"):
+F, [2016-09-01T09:29:32.180507 #20695] FATAL -- :   
+F, [2016-09-01T09:29:32.180556 #20695] FATAL -- :   
+F, [2016-09-01T09:29:32.180611 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+F, [2016-09-01T09:29:32.180692 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+F, [2016-09-01T09:29:32.180736 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.180769 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.180797 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+F, [2016-09-01T09:29:32.180827 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+F, [2016-09-01T09:29:32.180854 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.180879 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.180901 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+F, [2016-09-01T09:29:32.180922 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+F, [2016-09-01T09:29:32.180956 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+F, [2016-09-01T09:29:32.180996 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+F, [2016-09-01T09:29:32.181016 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+F, [2016-09-01T09:29:32.181038 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+F, [2016-09-01T09:29:32.181057 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+F, [2016-09-01T09:29:32.181077 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+F, [2016-09-01T09:29:32.181108 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+F, [2016-09-01T09:29:32.181141 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+F, [2016-09-01T09:29:32.181161 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+F, [2016-09-01T09:29:32.181181 #20695] FATAL -- : railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+F, [2016-09-01T09:29:32.181199 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181219 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181238 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+F, [2016-09-01T09:29:32.181258 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+F, [2016-09-01T09:29:32.181286 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181306 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181336 #20695] FATAL -- : rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+F, [2016-09-01T09:29:32.181356 #20695] FATAL -- : rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+F, [2016-09-01T09:29:32.181374 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181404 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181433 #20695] FATAL -- : rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+F, [2016-09-01T09:29:32.181464 #20695] FATAL -- : rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+F, [2016-09-01T09:29:32.181484 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181516 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181535 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+F, [2016-09-01T09:29:32.181557 #20695] FATAL -- : activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+F, [2016-09-01T09:29:32.181576 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181596 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181614 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+F, [2016-09-01T09:29:32.181634 #20695] FATAL -- : actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+F, [2016-09-01T09:29:32.181652 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181672 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181694 #20695] FATAL -- : rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+F, [2016-09-01T09:29:32.181714 #20695] FATAL -- : rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+F, [2016-09-01T09:29:32.181732 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181751 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181768 #20695] FATAL -- : railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+F, [2016-09-01T09:29:32.181787 #20695] FATAL -- : railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+F, [2016-09-01T09:29:32.181805 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181858 #20695] FATAL -- : newrelic_rpm (3.16.2.321) lib/new_relic/agent/instrumentation/middleware_tracing.rb:96:in `call'
+F, [2016-09-01T09:29:32.181883 #20695] FATAL -- : puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+F, [2016-09-01T09:29:32.181906 #20695] FATAL -- : puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+F, [2016-09-01T09:29:32.181926 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+F, [2016-09-01T09:29:32.181947 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+F, [2016-09-01T09:29:32.181966 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+F, [2016-09-01T09:29:32.181987 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+F, [2016-09-01T09:29:32.182008 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+F, [2016-09-01T09:29:32.182028 #20695] FATAL -- : puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+F, [2016-09-01T09:29:32.182046 #20695] FATAL -- : puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+F, [2016-09-01T09:29:32.182065 #20695] FATAL -- : puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+I, [2016-09-01T09:29:34.456682 #20695]  INFO -- : Started GET "/users/sign_out" for 127.0.0.1 at 2016-09-01 09:29:34 +0100
+I, [2016-09-01T09:29:34.457500 #20695]  INFO -- : Processing by UsersController#show as HTML
+I, [2016-09-01T09:29:34.457547 #20695]  INFO -- :   Parameters: {"id"=>"sign_out"}
+D, [2016-09-01T09:29:34.459206 #20695] DEBUG -- :   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+D, [2016-09-01T09:29:34.462084 #20695] DEBUG -- :   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+I, [2016-09-01T09:29:34.462465 #20695]  INFO -- : Completed 404 Not Found in 5ms (ActiveRecord: 0.9ms)
+F, [2016-09-01T09:29:34.463078 #20695] FATAL -- :   
+F, [2016-09-01T09:29:34.463103 #20695] FATAL -- : ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_out):
+F, [2016-09-01T09:29:34.463116 #20695] FATAL -- :   
+F, [2016-09-01T09:29:34.463127 #20695] FATAL -- : app/controllers/users_controller.rb:10:in `show'
