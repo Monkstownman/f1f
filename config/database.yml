@@ -20,10 +20,10 @@ development:
 #  pool: 5
 
  # f1f_heroku_development
-database: d9hfrtl6747vpl
-username: nvemaannrdpexi
-password: aHw2U3zosQpErKoCMiN6ubW3Bl
-host: ec2-54-163-240-204.compute-1.amazonaws.com
+database: d3nip374udq6gm
+username: qcdqehtbytnekt
+password: 6f3jmpNwGnTmh8zijyvm64PBS9
+host: ec2-23-21-234-218.compute-1.amazonaws.com
 port: 5432
 pool: 5
 
@@ -48,9 +48,9 @@ production:
 #  port: 5432
 #  pool: 20
     # f1f_heroku_development
-database: d9hfrtl6747vpl
-username: nvemaannrdpexi
-password: aHw2U3zosQpErKoCMiN6ubW3Bl
-host: ec2-54-163-240-204.compute-1.amazonaws.com
+database: d3nip374udq6gm
+username: qcdqehtbytnekt
+password: 6f3jmpNwGnTmh8zijyvm64PBS9
+host: ec2-23-21-234-218.compute-1.amazonaws.com
 port: 5432
 pool: 5
