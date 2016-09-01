@@ -12,12 +12,20 @@ default: &default
 
 development:
   <<: *default
-  database: da7tidufbl430u
-  username: djtmzbshfgbsjt
-  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
-  host: ec2-50-17-255-6.compute-1.amazonaws.com
-  port: 5432
-  pool: 5
+#  database: da7tidufbl430u
+#  username: djtmzbshfgbsjt
+#  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
+#  host: ec2-50-17-255-6.compute-1.amazonaws.com
+#  port: 5432
+#  pool: 5
+
+ # f1f_heroku_development
+database: d9hfrtl6747vpl
+username: nvemaannrdpexi
+password: aHw2U3zosQpErKoCMiN6ubW3Bl
+host: ec2-54-163-240-204.compute-1.amazonaws.com
+port: 5432
+pool: 5
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -33,9 +41,16 @@ test:
 #
 production:
   <<: *default
-  database: da7tidufbl430u
-  username: djtmzbshfgbsjt
-  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
-  host: ec2-50-17-255-6.compute-1.amazonaws.com
-  port: 5432
-  pool: 20
+#  database: da7tidufbl430u
+#  username: djtmzbshfgbsjt
+#  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
+#  host: ec2-50-17-255-6.compute-1.amazonaws.com
+#  port: 5432
+#  pool: 20
+    # f1f_heroku_development
+database: d9hfrtl6747vpl
+username: nvemaannrdpexi
+password: aHw2U3zosQpErKoCMiN6ubW3Bl
+host: ec2-54-163-240-204.compute-1.amazonaws.com
+port: 5432
+pool: 5
