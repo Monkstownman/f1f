@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="PostgreSQL - da7tidufbl430u@ec2-50-17-255-6.compute-1.amazonaws.com" uuid="df1e8f72-b2b6-49b0-9c91-494fa6811375">
-      <secret-storage>master_key</secret-storage>
-      <user-name>djtmzbshfgbsjt</user-name>
-      <schema-pattern>da7tidufbl430u.*</schema-pattern>
-      <default-schemas>da7tidufbl430u.public</default-schemas>
-    </data-source>
-    <data-source name="PostgreSQL - f1f_development@localhost" uuid="e1246b75-6136-43b5-bcc0-cefd162b4b07">
-      <secret-storage>master_key</secret-storage>
-      <user-name>johncog</user-name>
-      <schema-pattern>f1f_development.pg_catalog f1f_development.public</schema-pattern>
-      <default-schemas>f1f_development.public</default-schemas>
-    </data-source>
     <data-source name="fire1foundry-development_heroku" uuid="62767e80-847a-4d0e-b3c4-d2beacf4a9b6">
+      <database-info product="PostgreSQL" version="9.5.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>qcdqehtbytnekt</user-name>
-      <schema-pattern>d3nip374udq6gm.pg_catalog d3nip374udq6gm.public</schema-pattern>
-      <default-schemas>d3nip374udq6gm.public</default-schemas>
+      <introspection-scope>d3nip374udq6gm:pg_catalog,public</introspection-scope>
+      <resolve-scope>d3nip374udq6gm:public</resolve-scope>
+    </data-source>
+    <data-source name="PostgreSQL - da7tidufbl430u@ec2-50-17-255-6.compute-1.amazonaws.com" uuid="75462e80-047a-4b44-80df-d0965d9c0e43">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <secret-storage>master_key</secret-storage>
+      <first-sync>true</first-sync>
+      <user-name>djtmzbshfgbsjt</user-name>
+    </data-source>
+    <data-source name="PostgreSQL - postgres@localhost" uuid="da2255f7-fcc3-4643-b5a1-5d18951b86fc">
+      <database-info product="PostgreSQL" version="9.3.14" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>johncog</user-name>
     </data-source>
   </component>
 </project>

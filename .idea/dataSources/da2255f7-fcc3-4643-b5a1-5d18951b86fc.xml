@@ -1,0 +1,89 @@
+<dataSource name="PostgreSQL - postgres@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+    <database id="1" name="postgres">
+      <object-id>12066</object-id>
+      <visible>1</visible>
+    </database>
+    <database id="2" name="johncog">
+      <object-id>16385</object-id>
+    </database>
+    <database id="3" name="carezapp_development">
+      <object-id>16386</object-id>
+    </database>
+    <database id="4" name="carezapp_production">
+      <object-id>16387</object-id>
+    </database>
+    <database id="5" name="dashboard">
+      <object-id>18048</object-id>
+    </database>
+    <database id="6" name="18eaton">
+      <object-id>24300</object-id>
+    </database>
+    <database id="7" name="carezapp_test">
+      <object-id>24509</object-id>
+    </database>
+    <database id="8" name="hello_app_development">
+      <object-id>24510</object-id>
+    </database>
+    <database id="9" name="hello_app_test">
+      <object-id>24511</object-id>
+    </database>
+    <database id="10" name="toy_app_development">
+      <object-id>24528</object-id>
+    </database>
+    <database id="11" name="toy_app_test">
+      <object-id>24529</object-id>
+    </database>
+    <database id="12" name="sample_app_development">
+      <object-id>24568</object-id>
+    </database>
+    <database id="13" name="sample_app_test">
+      <object-id>24875</object-id>
+    </database>
+    <database id="14" name="fire1foundry_development">
+      <object-id>24909</object-id>
+    </database>
+    <database id="15" name="fire1foundry_test">
+      <object-id>24983</object-id>
+    </database>
+    <database id="16" name="dashboard_test">
+      <object-id>33175</object-id>
+    </database>
+    <database id="17" name="rails-devise_development">
+      <object-id>41367</object-id>
+    </database>
+    <database id="18" name="rails-devise_test">
+      <object-id>41368</object-id>
+    </database>
+    <database id="19" name="rails-devise_production">
+      <object-id>41369</object-id>
+    </database>
+    <database id="20" name="f1f_development">
+      <object-id>41370</object-id>
+    </database>
+    <database id="21" name="f1f_test">
+      <object-id>41371</object-id>
+    </database>
+    <schema id="22" parent="1" name="public">
+      <object-id>2200</object-id>
+      <comment>standard public schema</comment>
+      <visible>1</visible>
+      <introspection-timestamp>2016-09-02.17:08:00.077</introspection-timestamp>
+    </schema>
+    <schema id="23" parent="1" name="pg_catalog">
+      <object-id>11</object-id>
+    </schema>
+    <schema id="24" parent="1" name="pg_toast">
+      <object-id>99</object-id>
+    </schema>
+    <schema id="25" parent="1" name="pg_temp_1">
+      <object-id>11215</object-id>
+    </schema>
+    <schema id="26" parent="1" name="pg_toast_temp_1">
+      <object-id>11216</object-id>
+    </schema>
+    <schema id="27" parent="1" name="information_schema">
+      <object-id>11518</object-id>
+    </schema>
+  </database-model>
+</dataSource>

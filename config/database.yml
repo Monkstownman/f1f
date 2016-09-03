@@ -1,56 +1,31 @@
-# Configure Using Gemfile
-# gem 'pg'
-#
 default: &default
   adapter: postgresql
   encoding: unicode
+  pool: 5
+  timeout: 5000
 
-
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-#  database: da7tidufbl430u
-#  username: djtmzbshfgbsjt
-#  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
-#  host: ec2-50-17-255-6.compute-1.amazonaws.com
-#  port: 5432
-#  pool: 5
+  database: d3nip374udq6gm
+  username: qcdqehtbytnekt
+  password: 6f3jmpNwGnTmh8zijyvm64PBS9
+  host: ec2-23-21-234-218.compute-1.amazonaws.com
+  port: 5432
 
- # f1f_heroku_development
-database: d3nip374udq6gm
-username: qcdqehtbytnekt
-password: 6f3jmpNwGnTmh8zijyvm64PBS9
-host: ec2-23-21-234-218.compute-1.amazonaws.com
-port: 5432
-pool: 5
-
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: fire1foundry_test
+  database: dashboard_test
 
-# You can use this database configuration with:
-#
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
 production:
   <<: *default
-#  database: da7tidufbl430u
-#  username: djtmzbshfgbsjt
-#  password: 528pRdWTl8nZOIl7IQHJ2qCjQ5
-#  host: ec2-50-17-255-6.compute-1.amazonaws.com
-#  port: 5432
-#  pool: 20
-    # f1f_heroku_development
-database: d3nip374udq6gm
-username: qcdqehtbytnekt
-password: 6f3jmpNwGnTmh8zijyvm64PBS9
-host: ec2-23-21-234-218.compute-1.amazonaws.com
-port: 5432
-pool: 5
+  #database: carezapp_production
+  #username: carezapp
+  #password: ppazerac
+  #host: carezapp-production.c0sqj89scu7r.eu-west-1.rds.amazonaws.com
+  #port: 5432
+  database: d3nip374udq6gm
+  username: qcdqehtbytnekt
+  password: 6f3jmpNwGnTmh8zijyvm64PBS9
+  host: ec2-23-21-234-218.compute-1.amazonaws.com
+  port: 5432
