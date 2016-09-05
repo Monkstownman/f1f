@@ -25,11 +25,14 @@ class MeasuresController < ApplicationController
 
     #Calcuated measures
     @seriesIVCStr = "[ "
-    user_thing_lookup_id = request.original_url.split('/measures.')[1].to_i
+
+    thing_id = request.original_url.split('/measures.')[1].to_i
+
     @things = Thing.all
-    thing_id = UserThingLookup.find(user_thing_lookup_id).thing_id
     thingname = @things.find(thing_id).thingname.to_s
     @measures = @measures.where(active: true).where(thingname: thingname).order(:datetime)
+
+    byebug
 
     Analytics.track(
         user_id: current_user.id,
@@ -59,6 +62,7 @@ class MeasuresController < ApplicationController
             @commentPresent = 4
           end
           @seriesWeightStr = @seriesWeightStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+
         elsif @subjectJSON["measures"][0]["name"] == "pap"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
@@ -68,10 +72,13 @@ class MeasuresController < ApplicationController
             @commentPresent = 4
           end
           @seriesPAPStr = @seriesPAPStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_max"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
-          @corresponding_ivc_diameter_min = @measures.where(active: true).where(name: "ivc_diameter_min").where(datetime: @datetime).first
+          @corresponding_ivc_diameter_min = @measures.where(active: true).where(name: "ivc_diameter_min").where(datetime: @datetime-1000...@datetime+1000).first
+          byebug
+
           @corresponding_subject = @corresponding_ivc_diameter_min.title
           @corresponding_subjectJSON = JSON.parse(@corresponding_subject.to_s)
           @corresponding_value = @corresponding_subjectJSON["measures"][0]["value"]
@@ -107,7 +114,6 @@ class MeasuresController < ApplicationController
           @ivc_value = (@value.to_f - @corresponding_value.to_f) / @value.to_f*100
           @seriesIVCStr = @seriesIVCStr + "{name: '" + @corresponding_comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @ivc_value.to_i.to_s + "   },"
 
-
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_min"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
@@ -117,6 +123,7 @@ class MeasuresController < ApplicationController
             @commentPresent = 4
           end
           @seriesIVCDiameterMinStr = @seriesIVCDiameterMinStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
+
         elsif @subjectJSON["measures"][0]["name"] == "Systolic Blood Pressure"
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
