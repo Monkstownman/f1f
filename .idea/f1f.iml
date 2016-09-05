@@ -209,7 +209,6 @@
     <orderEntry type="library" scope="PROVIDED" name="rails (v5.0.0.1, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-dom-testing (v2.0.1, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rails-html-sanitizer (v1.0.3, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rails_layout (v1.0.29, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="railties (v5.0.0.1, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v11.2.2, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rb-fchange (v0.0.6, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
@@ -220,7 +219,6 @@
     <orderEntry type="library" scope="PROVIDED" name="responders (v2.3.0, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="retriable (v2.1.0, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec (v3.5.0, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec-core (v3.5.2, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v3.5.0, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v3.5.0, RVM: ruby-2.3.1 [global]) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v3.5.2, RVM: ruby-2.3.1 [global]) [gem]" level="application" />

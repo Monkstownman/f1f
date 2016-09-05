@@ -32,7 +32,7 @@ class MeasuresController < ApplicationController
     thingname = @things.find(thing_id).thingname.to_s
     @measures = @measures.where(active: true).where(thingname: thingname).order(:datetime)
 
-    byebug
+
 
     Analytics.track(
         user_id: current_user.id,
@@ -77,7 +77,7 @@ class MeasuresController < ApplicationController
           @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
           @value = @subjectJSON["measures"][0]["value"]
           @corresponding_ivc_diameter_min = @measures.where(active: true).where(name: "ivc_diameter_min").where(datetime: @datetime-1000...@datetime+1000).first
-          byebug
+
 
           @corresponding_subject = @corresponding_ivc_diameter_min.title
           @corresponding_subjectJSON = JSON.parse(@corresponding_subject.to_s)
