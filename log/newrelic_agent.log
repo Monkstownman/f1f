@@ -12215,3 +12215,4 @@ Could not load database configuration. No such file - ["config/database.yml"]
 [2016-09-05 21:31:57 +0100 johncog-XPS-8700 (24741)] WARN : Ignoring addition of vm because it is already registered.
 [2016-09-05 21:31:58 +0100 johncog-XPS-8700 (24735)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
 [2016-09-05 21:31:59 +0100 johncog-XPS-8700 (24741)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2016-09-05 21:38:10 +0100 johncog-XPS-8700 (23260)] INFO : Starting Agent shutdown
