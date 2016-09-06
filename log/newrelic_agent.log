@@ -13616,3 +13616,108 @@ Could not load database configuration. No such file - ["config/database.yml"]
 [2016-09-06 08:51:49 +0100 johncog-XPS-8700 (13885)] INFO : Finished instrumentation
 [2016-09-06 08:51:52 +0100 johncog-XPS-8700 (13885)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
 [2016-09-06 08:52:06 +0100 johncog-XPS-8700 (13885)] INFO : Starting Agent shutdown
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Starting the New Relic agent in "development" environment.
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/johnacogan@gmail.com/f1f)
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : New Relic Agent Developer Mode enabled.
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Environment: development
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : No known dispatcher detected.
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Application: My Application (Development)
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing ActiveJob instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing Net instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing Rails 5 Action Cable instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing Rails 5 Controller instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Installing Rails 5 view instrumentation
+[2016-09-06 08:57:01 +0100 johncog-XPS-8700 (14857)] INFO : Finished instrumentation
+[2016-09-06 08:57:03 +0100 johncog-XPS-8700 (14857)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2016-09-06 08:57:17 +0100 johncog-XPS-8700 (14857)] INFO : Starting Agent shutdown
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Starting the New Relic agent in "development" environment.
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/johnacogan@gmail.com/f1f)
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : New Relic Agent Developer Mode enabled.
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Environment: development
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : No known dispatcher detected.
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Application: My Application (Development)
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing ActiveJob instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing Net instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing Rails 5 Action Cable instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing Rails 5 Controller instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Installing Rails 5 view instrumentation
+[2016-09-06 09:12:59 +0100 johncog-XPS-8700 (17390)] INFO : Finished instrumentation
+[2016-09-06 09:13:01 +0100 johncog-XPS-8700 (17390)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2016-09-06 09:13:15 +0100 johncog-XPS-8700 (17390)] INFO : Starting Agent shutdown
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Starting the New Relic agent in "development" environment.
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/johnacogan@gmail.com/f1f)
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : New Relic Agent Developer Mode enabled.
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Environment: development
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : No known dispatcher detected.
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Application: My Application (Development)
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing ActiveJob instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing Net instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing Rails 5 Action Cable instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing Rails 5 Controller instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Installing Rails 5 view instrumentation
+[2016-09-06 09:21:08 +0100 johncog-XPS-8700 (18659)] INFO : Finished instrumentation
+[2016-09-06 09:21:11 +0100 johncog-XPS-8700 (18659)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2016-09-06 09:21:25 +0100 johncog-XPS-8700 (18659)] INFO : Starting Agent shutdown
+[2016-09-06 09:22:51 +0100 johncog-XPS-8700 (18977)] INFO : Starting the New Relic agent in "development" environment.
+[2016-09-06 09:22:51 +0100 johncog-XPS-8700 (18977)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-09-06 09:22:51 +0100 johncog-XPS-8700 (18977)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/johnacogan@gmail.com/f1f)
+[2016-09-06 09:22:51 +0100 johncog-XPS-8700 (18977)] INFO : New Relic Agent Developer Mode enabled.
+[2016-09-06 09:22:51 +0100 johncog-XPS-8700 (18977)] INFO : Environment: development
+[2016-09-06 09:22:51 +0100 johncog-XPS-8700 (18977)] INFO : No known dispatcher detected.
+[2016-09-06 09:22:51 +0100 johncog-XPS-8700 (18977)] INFO : Application: My Application (Development)
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing ActiveJob instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing Net instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing Rails 5 Action Cable instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing Rails 5 Controller instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Installing Rails 5 view instrumentation
+[2016-09-06 09:22:52 +0100 johncog-XPS-8700 (18977)] INFO : Finished instrumentation
+[2016-09-06 09:22:54 +0100 johncog-XPS-8700 (18977)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2016-09-06 09:23:08 +0100 johncog-XPS-8700 (18977)] INFO : Starting Agent shutdown
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Starting the New Relic agent in "development" environment.
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/johnacogan@gmail.com/f1f)
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : New Relic Agent Developer Mode enabled.
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Environment: development
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : No known dispatcher detected.
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Application: My Application (Development)
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing Rails 3+ middleware instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing deferred Rack::Builder instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing Rack::Builder middleware instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing deferred Puma::Rack::Builder instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing Puma::Rack::Builder middleware instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing ActiveJob instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing Net instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing ActiveRecord 4+ instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing Rails 5 Action Cable instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing Rails 5 Controller instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Installing Rails 5 view instrumentation
+[2016-09-06 09:32:46 +0100 johncog-XPS-8700 (20723)] INFO : Finished instrumentation
+[2016-09-06 09:32:50 +0100 johncog-XPS-8700 (20723)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2016-09-06 09:33:03 +0100 johncog-XPS-8700 (20723)] INFO : Starting Agent shutdown

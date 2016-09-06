@@ -1,19 +1,19 @@
-<h1>Dashboard</h1>
+<h1>IVC Dashboard</h1>
 
 <table id="user_thing_lookups" class="display" cellspacing="0" width="100%">
   <thead>
   <tr>
     <th style="display:none">Sort</th>
     <th>Patient</th>
-    <th>IVC <br><br><%= (Date.today-4).strftime("%d") %></th>
+    <th><br><%= (Date.today-4).strftime("%d") %></th>
     <th><br><br><%= (Date.today-3).strftime("%d") %></th>
     <th><br>Diameter<br><%= (Date.today-2).strftime("%d") %></th>
     <th><br><br>Yesterday</th>
     <th><br><br>Today</th>
     <th><br><br> <%= (Date.today-4).strftime("%d") %></th>
     <th><br><br> <%= (Date.today-3).strftime("%d") %></th>
-    <th><br>CI<br> <%= (Date.today-2).strftime("%d") %></th>
-    <th><br><br>Yyesterday</th>
+    <th><br>Collapsibility<br> <%= (Date.today-2).strftime("%d") %></th>
+    <th><br><br>Yesterday</th>
     <th><br><br>Today</th>
     <th><br>Grade <br>RAP</th>
     <th style="display:none" colspan="1">ID</th>
@@ -166,47 +166,39 @@
         <td>
           <% if @ivc_4_max.to_f == 0.to_f %>
           <% else %>
-              <%= sprintf('%.2f', ((@ivc_4_max.to_f - @ivc_4_min.to_f)/@ivc_4_max.to_f)*100) %>
+              <%= sprintf('%.0f', ((@ivc_4_max.to_f - @ivc_4_min.to_f)/@ivc_4_max.to_f)*100) %>
           <% end %>
         </td>
         <td>
           <% if @ivc_3_max.to_f == 0.to_f %>
           <% else %>
-              <%= sprintf('%.2f', ((@ivc_3_max.to_f - @ivc_3_min.to_f)/@ivc_3_max.to_f)*100) %>
+              <%= sprintf('%.0f', ((@ivc_3_max.to_f - @ivc_3_min.to_f)/@ivc_3_max.to_f)*100) %>
           <% end %>
         </td>
         <td>
           <% if @ivc_2_max.to_f == 0.to_f %>
           <% else %>
-              <%= sprintf('%.2f', ((@ivc_2_max.to_f - @ivc_2_min.to_f)/@ivc_2_max.to_f)*100) %>
+              <%= sprintf('%.0f', ((@ivc_2_max.to_f - @ivc_2_min.to_f)/@ivc_2_max.to_f)*100) %>
           <% end %>
         </td>
         <td>
           <% if @ivc_yesterday_max.to_f == 0.to_f %>
           <% else %>
-              <%= sprintf('%.2f', ((@ivc_yesterday_max.to_f - @ivc_yesterday_min.to_f)/@ivc_yesterday_max.to_f)*100) %>
+              <%= sprintf('%.0f', ((@ivc_yesterday_max.to_f - @ivc_yesterday_min.to_f)/@ivc_yesterday_max.to_f)*100) %>
           <% end %>
         </td>
         <td>
           <% if @ivc_today_max.to_f == 0.to_f %>
           <% else %>
-              <%= sprintf('%.2f', ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f)*100) %>
+              <%= sprintf('%.0f', ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f)*100) %>
           <% end %>
         </td>
         <td>
           <% if ((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) > ".5".to_f && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) <= "21".to_f) %>
               <%= "Normal" %>
-          <% elsif (((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) < ".5".to_f) && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) <= "21".to_f) %>
-
+          <% elsif (((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) <= ".5".to_f) && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) <= "21".to_f) %>
               <%= "Intermediate" %>
-
-
-
-
-
-
-
-          <% elsif (((@ivc_today_max.to_f - @ivc_today_min.to_f)/@ivc_today_max.to_f) < ".5".to_f) && (((@ivc_today_max.to_f + @ivc_today_min.to_f)/2) > "21".to_f) %>
+          <% else %>
               <% if Measure.where(name: 'alert').where(value: @ivc_today_title).first.nil?
                    @measure = Measure.new
                    @measure.title = '{ "measures": [ { "name":"alert","time":"' + DateTime.now.to_s + '","value":"place_holder","user":"ivc_max_alert" } ] }'
@@ -219,13 +211,12 @@
                    @measure.source = 'ivc_max_alert'
                    @measure.active = true
                    @measure.save %>
-                  <%= "Intermediate" %>
+                  <%= "High" %>
               <% elsif !Measure.where(name: 'acknowledgement').where(value: @ivc_today_title).first.nil? %>
                   <%= "High " %>
-              <% else %>
+              <% elsif ((@ivc_today_max.to_f > 0.to_f && (@ivc_today_max.to_f) > "0".to_f)) %>
                   <%= "High" %>
               <% end %>
-          <% else %>
           <% end %>
         </td>
         <td style="display:none"><%= Thing.find(user_thing_lookup.thing_id).id %></td>
@@ -276,7 +267,8 @@
           };
       currentRow.onload = onLoadHandler(currentRow);
     }
-  };
+  }
+  ;
 
   window.onload = addRowHandlers();
   window.onload = colourRow();
