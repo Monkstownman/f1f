@@ -99,6 +99,85 @@ task :update_measures => :environment do
   end
 end
 
+task :update_measures_text => :environment do
+
+  require 'fileutils'
+
+
+  array = '
+
+[16-09-06 00:44:57:580 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-06T07:44:44.314Z","value":"74.5","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:45:13:384 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-05T07:44:57.664Z","value":"74.3","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:45:24:992 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-04T07:45:14.146Z","value":"74.4","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:45:35:872 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-03T07:45:26.739Z","value":"74.4","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:45:43:447 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-02T07:45:36.011Z","value":"75.2","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:45:48:507 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-01T07:45:43.597Z","value":"74.8","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:45:54:193 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-31T07:45:48.652Z","value":"74.1","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:00:028 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-30T07:45:54.392Z","value":"74.2","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:05:215 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-29T07:46:00.108Z","value":"75.2","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:10:870 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-28T07:46:05.388Z","value":"74.3","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:16:099 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-27T07:46:10.956Z","value":"74.2","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:22:247 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-26T07:46:16.188Z","value":"75.1","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:27:175 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-25T07:46:22.353Z","value":"74.3","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:32:914 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-24T07:46:27.323Z","value":"74.6","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:41:817 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-23T07:46:33.094Z","value":"74","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:47:725 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-22T07:46:41.921Z","value":"66.4","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:46:57:404 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-21T07:46:47.842Z","value":"65.7","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:02:339 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-20T07:46:57.498Z","value":"66.3","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:07:263 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-06T07:47:02.431Z","value":"3.7","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:11:460 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-05T07:47:07.370Z","value":"2.9","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:16:330 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-04T07:47:11.549Z","value":"7.5","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:21:204 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-03T07:47:16.420Z","value":"4.2","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:26:134 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-02T07:47:21.390Z","value":"2.8","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:31:904 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-01T07:47:26.216Z","value":"7.4","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:37:952 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-31T07:47:32.031Z","value":"3.4","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:47:42:695 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-30T07:47:38.038Z","value":"7.1","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:48:19:373 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-29T07:47:43.272Z","value":"7.5","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:48:26:985 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-28T07:48:19.459Z","value":"2.6","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:48:35:876 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-27T07:48:27.945Z","value":"6.7","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:49:00:631 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-26T07:48:36.796Z","value":"2.8","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:49:46:142 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-25T07:49:00.799Z","value":"5.8","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:49:59:477 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-24T07:49:47.064Z","value":"4.7","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:50:06:294 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-23T07:49:59.556Z","value":"6.8","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:50:18:544 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-22T07:50:06.377Z","value":"3.6","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:50:22:580 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-21T07:50:18.633Z","value":"7.6","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-06 00:50:27:249 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-20T07:50:22.674Z","value":"3.4","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxsubjectxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+'.split(/subject/)
+
+
+  array.each do |item|
+
+      begin
+
+        item = item[2...-31]
+        subjectJSON = JSON.parse(item.to_s)
+        datetime = DateTime.parse(subjectJSON["measures"][0]["time"])
+        name = subjectJSON["measures"][0]["name"]
+        value = subjectJSON["measures"][0]["value"].tr(',', '')
+        thingname = subjectJSON["measures"][0]["user"]
+        unit = subjectJSON["measures"][0]["unit"]
+        source = subjectJSON["measures"][0]["source"]
+        comment = ""
+        if Measure.where(name: name, datetime: datetime, thingname: thingname).exists?
+          @measure = Measure.where(datetime: datetime, thingname: thingname).first
+          @measure.title = subject
+          @measure.value = value
+          @measure.thingname = thingname
+          @measure.save #
+        else
+          @measure = Measure.new("title" => item, "body" => "", "datetime" => datetime, "name" => name, "value" => value, "thingname" => thingname, "unit" => unit, "source" => source, "comment" => comment, "active" => true)
+          @measure.save
+        end
+      rescue
+        puts "inside rescue..."
+        next
+      end
+
+      end
+    puts "Finished..."
+  end
+
 
 
 

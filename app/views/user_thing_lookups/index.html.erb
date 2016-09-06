@@ -8,13 +8,13 @@
     <th>IVC <br><br><%= (Date.today-4).strftime("%d") %></th>
     <th><br><br><%= (Date.today-3).strftime("%d") %></th>
     <th><br>Diameter<br><%= (Date.today-2).strftime("%d") %></th>
-    <th><br><br>Y</th>
-    <th><br><br>T</th>
+    <th><br><br>Yesterday</th>
+    <th><br><br>Today</th>
     <th><br><br> <%= (Date.today-4).strftime("%d") %></th>
     <th><br><br> <%= (Date.today-3).strftime("%d") %></th>
     <th><br>CI<br> <%= (Date.today-2).strftime("%d") %></th>
-    <th><br><br>Y</th>
-    <th><br><br>T</th>
+    <th><br><br>Yyesterday</th>
+    <th><br><br>Today</th>
     <th><br>Grade <br>RAP</th>
     <th style="display:none" colspan="1">ID</th>
   </tr>
@@ -234,7 +234,6 @@
   </tbody>
 </table>
 <br>
-<%= link_to 'New User Thing Lookup', new_user_thing_lookup_path %>
 
 <script>
 

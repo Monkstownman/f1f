@@ -76,32 +76,36 @@
         }],
         yAxis: [{
           title: {
-            text: 'mm'
+            text: 'Diameter mm'
           },
           min: 0,
           max: 30,
+          legend: {
+            enabled: true
+          },
 
         }, { // Secondary yAxis
           min: 0,
           max: 100,
+          legend: {
+            enabled: true
+          },
           title: {
-            text: 'IVC %',
+            text: 'Collapsibility %',
 
             style: {
-              color: Highcharts.getOptions().colors[0]
             }
           },
           labels: {
             format: '{value}',
             style: {
-              color: Highcharts.getOptions().colors[0]
             }
           },
           opposite: true
         }
         ],
         legend: {
-          enabled: false
+          enabled: true
         },
         plotOptions: {
           spline: {
@@ -112,17 +116,17 @@
         },
         series: [
           {
-            name: 'IVC Diameter Max',
+            name: 'Diameter Max',
             data: <%= raw @seriesIVCDiameterMaxStr%>,
             yAxis: 0
           },
           {
-            name: 'IVC Diameter Min',
+            name: 'Diameter Min',
             data: <%= raw @seriesIVCDiameterMinStr%>,
             yAxis: 0
           },
           {
-            name: 'IVC',
+            name: 'Collapsibility %',
             data: <%= raw @seriesIVCStr%>,
             yAxis: 1
           }
