@@ -106,42 +106,38 @@ task :update_measures_text => :environment do
 
   array = '
 
-[16-09-06 01:23:27:579 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-06T08:23:20.944Z","value":"88.1","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:23:32:951 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-05T08:23:27.667Z","value":"85.4","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:23:38:932 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-04T08:23:33.036Z","value":"86.5","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:23:44:337 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-03T08:23:39.021Z","value":"87.2","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:24:04:552 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-02T08:23:44.425Z","value":"85.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:24:10:638 PDT] subject "{"measures":[{"name":"weight","time":"2016-09-01T08:24:04.655Z","value":"87.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:24:25:431 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-31T08:24:10.725Z","value":"87.1","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:24:43:450 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-30T08:24:27.638Z","value":"87.6","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:24:50:008 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-29T08:24:43.971Z","value":"85.1","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:24:54:017 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-28T08:24:50.154Z","value":"88","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:24:58:470 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-27T08:24:54.393Z","value":"88.4","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:25:05:805 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-26T08:24:58.548Z","value":"87.4","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:25:14:863 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-25T08:25:05.888Z","value":"84.9","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:25:20:439 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-24T08:25:15.398Z","value":"87.8","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:25:27:146 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-23T08:25:20.534Z","value":"87.9","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:25:42:369 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-22T08:25:28.168Z","value":"85.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:25:47:156 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-21T08:25:42.450Z","value":"85.2","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:25:59:176 PDT] subject "{"measures":[{"name":"weight","time":"2016-08-20T08:25:47.237Z","value":"87.1","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:07:012 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-06T08:25:59.424Z","value":"8.2","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:15:238 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-05T08:26:08.455Z","value":"10.9","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:23:688 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-04T08:26:15.469Z","value":"15.9","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:29:442 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-03T08:26:23.773Z","value":"11.4","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:36:042 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-02T08:26:29.562Z","value":"8.6","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:40:698 PDT] subject "{"measures":[{"name":"pap","time":"2016-09-01T08:26:36.202Z","value":"15.1","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:46:304 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-31T08:26:40.828Z","value":"14.2","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:55:275 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-30T08:26:46.421Z","value":"11.9","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:26:59:089 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-29T08:26:55.359Z","value":"14.2","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:04:280 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-28T08:26:59.174Z","value":"10.5","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:08:141 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-27T08:27:04.357Z","value":"8.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:12:394 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-26T08:27:08.257Z","value":"11.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:18:926 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-25T08:27:12.499Z","value":"15.2","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:30:002 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-24T08:27:19.041Z","value":"12.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:40:638 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-23T08:27:33.384Z","value":"9.4","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:46:448 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-22T08:27:40.743Z","value":"11.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:51:634 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-21T08:27:46.583Z","value":"15.8","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
-[16-09-06 01:27:56:118 PDT] subject "{"measures":[{"name":"pap","time":"2016-08-20T08:27:51.750Z","value":"15.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
+[16-09-09 06:16:34:698 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:16:31.142Z","value":"18","unit":"mm","source":"E347689_virtual_device","user":"E347689"}]}".
+[16-09-09 06:16:38:225 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:16:34.777Z","value":"8","unit":"mm","source":"E347689_virtual_device","user":"E347689"}]}".
+[16-09-09 06:16:41:944 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:16:38.302Z","value":"63.1","unit":"mm","source":"E347689_virtual_device","user":"E347689"}]}".
+[16-09-09 06:16:45:190 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:16:42.024Z","value":"7.1","unit":"mm","source":"E347689_virtual_device","user":"E347689"}]}".
+[16-09-09 06:17:03:002 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:16:45.301Z","value":"20","unit":"mm","source":"E452901_virtual_device","user":"E452901"}]}".
+[16-09-09 06:17:07:183 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:17:03.093Z","value":"12","unit":"mm","source":"E452901_virtual_device","user":"E452901"}]}".
+[16-09-09 06:17:14:649 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:17:07.294Z","value":"84.9","unit":"mm","source":"E452901_virtual_device","user":"E452901"}]}".
+[16-09-09 06:17:18:471 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:17:14.725Z","value":"3.2","unit":"mm","source":"E452901_virtual_device","user":"E452901"}]}".
+[16-09-09 06:17:22:063 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:17:18.580Z","value":"23","unit":"mm","source":"E299845_virtual_device","user":"E299845"}]}".
+[16-09-09 06:17:27:749 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:17:22.139Z","value":"11","unit":"mm","source":"E299845_virtual_device","user":"E299845"}]}".
+[16-09-09 06:17:34:558 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:17:27.825Z","value":"72.2","unit":"mm","source":"E299845_virtual_device","user":"E299845"}]}".
+[16-09-09 06:17:38:035 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:17:34.641Z","value":"12.6","unit":"mm","source":"E299845_virtual_device","user":"E299845"}]}".
+[16-09-09 06:17:43:322 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:17:38.167Z","value":"16","unit":"mm","source":"E321859_virtual_device","user":"E321859"}]}".
+[16-09-09 06:17:46:473 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:17:43.398Z","value":"7","unit":"mm","source":"E321859_virtual_device","user":"E321859"}]}".
+[16-09-09 06:17:50:643 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:17:46.550Z","value":"80.4","unit":"mm","source":"E321859_virtual_device","user":"E321859"}]}".
+[16-09-09 06:17:54:346 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:17:50.725Z","value":"4","unit":"mm","source":"E321859_virtual_device","user":"E321859"}]}".
+[16-09-09 06:17:57:721 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:17:54.595Z","value":"15","unit":"mm","source":"E437382_virtual_device","user":"E437382"}]}".
+[16-09-09 06:18:01:084 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:17:57.796Z","value":"8","unit":"mm","source":"E437382_virtual_device","user":"E437382"}]}".
+[16-09-09 06:18:04:510 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:18:01.158Z","value":"66","unit":"mm","source":"E437382_virtual_device","user":"E437382"}]}".
+[16-09-09 06:18:07:990 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:18:04.590Z","value":"6","unit":"mm","source":"E437382_virtual_device","user":"E437382"}]}".
+[16-09-09 06:18:11:486 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:18:08.104Z","value":"17","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-09 06:18:15:529 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:18:11.570Z","value":"8","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-09 06:18:20:250 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:18:15.605Z","value":"74.2","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-09 06:18:24:382 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:18:20.337Z","value":"7.4","unit":"mm","source":"E397367_virtual_device","user":"E397367"}]}".
+[16-09-09 06:18:28:479 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:18:24.514Z","value":"18","unit":"mm","source":"E401673_virtual_device","user":"E401673"}]}".
+[16-09-09 06:18:32:186 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:18:28.570Z","value":"9","unit":"mm","source":"E401673_virtual_device","user":"E401673"}]}".
+[16-09-09 06:18:35:410 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:18:32.256Z","value":"58.9","unit":"mm","source":"E401673_virtual_device","user":"E401673"}]}".
+[16-09-09 06:18:38:697 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:18:35.484Z","value":"4","unit":"mm","source":"E401673_virtual_device","user":"E401673"}]}".
+[16-09-09 06:18:42:017 BST] subject "{"measures":[{"name":"ivc_diameter_max","time":"2016-09-07T05:18:38.805Z","value":"19","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
+[16-09-09 06:18:45:271 BST] subject "{"measures":[{"name":"ivc_diameter_min","time":"2016-09-07T05:18:42.097Z","value":"18","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
+[16-09-09 06:18:48:565 BST] subject "{"measures":[{"name":"weight","time":"2016-09-07T05:18:45.348Z","value":"87.3","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
+[16-09-09 06:18:51:975 BST] subject "{"measures":[{"name":"pap","time":"2016-09-07T05:18:48.650Z","value":"15.1","unit":"mm","source":"E356297_virtual_device","user":"E356297"}]}".
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxsubjectxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
 '.split(/subject/)
 
