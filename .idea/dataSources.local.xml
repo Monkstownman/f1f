@@ -8,7 +8,6 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>qcdqehtbytnekt</user-name>
-      <introspection-scope>d3nip374udq6gm:pg_catalog,public</introspection-scope>
       <resolve-scope>d3nip374udq6gm:public</resolve-scope>
     </data-source>
     <data-source name="PostgreSQL - da7tidufbl430u@ec2-50-17-255-6.compute-1.amazonaws.com" uuid="75462e80-047a-4b44-80df-d0965d9c0e43">
