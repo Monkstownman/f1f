@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aae35cc8-616f-430f-a951-3d5d47336918" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="f1f.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,8 +39,8 @@
       <file leaf-file-name="scheduler.rake" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="830">
-              <caret line="84" column="22" lean-forward="false" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+            <state relative-caret-position="230">
+              <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -131,9 +131,9 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/temp.js" />
         <option value="$PROJECT_DIR$/app/views/user_thing_lookups/index.html.erb" />
-        <option value="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
         <option value="$PROJECT_DIR$/app/views/measures/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
       </list>
     </option>
   </component>
@@ -500,12 +500,12 @@
       <workItem from="1473251649309" duration="1081000" />
       <workItem from="1473340410207" duration="1952000" />
       <workItem from="1473358712572" duration="3405000" />
-      <workItem from="1486113206388" duration="2689000" />
+      <workItem from="1486113206388" duration="3559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241079000" />
+    <option name="totallyTimeSpent" value="241949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1916" y="0" width="1928" height="1050" extended-state="6" />
@@ -842,8 +842,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/tasks/scheduler.rake">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="84" column="22" lean-forward="false" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        <state relative-caret-position="230">
+          <caret line="38" column="32" lean-forward="true" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
           <folding />
         </state>
       </provider>
