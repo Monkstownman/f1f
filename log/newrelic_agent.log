@@ -13816,3 +13816,131 @@ Could not load database configuration. No such file - ["config/database.yml"]
 [2016-09-09 06:24:09 +0100 johncog-XPS-8700 (5756)] WARN : Ignoring addition of vm because it is already registered.
 [2016-09-09 06:24:10 +0100 johncog-XPS-8700 (5747)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
 [2016-09-09 06:24:11 +0100 johncog-XPS-8700 (5756)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/f1f)
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : New Relic Agent Developer Mode enabled.
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Environment: development
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : No known dispatcher detected.
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Application: My Application (Development)
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing Net instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing ActiveJob instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing Rails 5 view instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Installing Rails 5 Controller instrumentation
+[2017-02-03 12:52:24 +0000 johncog-Latitude-E6220 (7252)] INFO : Finished instrumentation
+[2017-02-03 12:52:25 +0000 johncog-Latitude-E6220 (7252)] INFO : Doing deferred dependency-detection before Rack startup
+[2017-02-03 12:52:27 +0000 johncog-Latitude-E6220 (7252)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-02-03 12:52:34 +0000 johncog-Latitude-E6220 (7268)] WARN : Ignoring addition of NewRelic::Agent::Samplers::CpuSampler because it is already registered.
+[2017-02-03 12:52:34 +0000 johncog-Latitude-E6220 (7268)] WARN : Ignoring addition of NewRelic::Agent::Samplers::MemorySampler because it is already registered.
+[2017-02-03 12:52:34 +0000 johncog-Latitude-E6220 (7268)] WARN : Ignoring addition of NewRelic::Agent::Samplers::VMSampler because it is already registered.
+[2017-02-03 12:52:36 +0000 johncog-Latitude-E6220 (7268)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-02-03 12:52:43 +0000 johncog-Latitude-E6220 (7264)] WARN : Ignoring addition of NewRelic::Agent::Samplers::CpuSampler because it is already registered.
+[2017-02-03 12:52:43 +0000 johncog-Latitude-E6220 (7264)] WARN : Ignoring addition of NewRelic::Agent::Samplers::MemorySampler because it is already registered.
+[2017-02-03 12:52:43 +0000 johncog-Latitude-E6220 (7264)] WARN : Ignoring addition of NewRelic::Agent::Samplers::VMSampler because it is already registered.
+[2017-02-03 12:52:46 +0000 johncog-Latitude-E6220 (7264)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-02-03 12:53:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 12:53:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 12:54:46 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 12:54:46 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 12:55:46 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 12:55:46 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 12:56:46 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 12:56:46 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 12:57:46 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 12:57:46 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 12:58:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 12:58:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 12:59:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 12:59:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:00:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:00:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:01:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:01:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:02:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:02:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:03:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:03:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:04:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:04:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:05:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:05:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:06:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:06:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:07:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:07:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:08:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:08:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:09:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:09:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:10:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:10:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:11:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:11:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:12:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:12:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:13:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:13:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:14:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:14:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:15:47 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:15:47 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:16:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:16:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:17:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:17:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:18:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:18:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:19:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:19:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:20:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:20:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:21:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:21:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:22:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:22:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:23:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:23:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:24:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:24:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:25:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:25:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:26:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:26:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:27:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:27:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:28:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:28:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:29:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:29:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:30:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:30:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:31:48 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:31:48 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:32:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:32:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:33:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:33:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:34:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:34:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:35:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:35:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:36:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:36:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:37:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:37:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:38:50 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:38:50 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:39:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:39:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:40:49 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:40:49 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7268)] INFO : Starting Agent shutdown
+[2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7264)] INFO : Starting Agent shutdown
+[2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
+[2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7252)] INFO : Starting Agent shutdown
