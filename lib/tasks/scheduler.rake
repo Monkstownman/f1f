@@ -35,7 +35,7 @@ task :update_measures => :environment do
       puts "Open the following URL in the browser and enter the " +
                "resulting code after authorization"
       puts url
-      code = "4/5_c9m6RJEMhnoGoGCIZhYKcxwBxqjHw5Dh3ImTqyYIY"
+      code = "4/xxxIHof-w0MKqXbIxyOVyQbT-LOPY3WKl_f7dMzk0jA"
       credentials = authorizer.get_and_store_credentials_from_code(
           user_id: user_id, code: code, base_url: OOB_URI)
     end

@@ -13944,3 +13944,42 @@ Could not load database configuration. No such file - ["config/database.yml"]
 [2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7264)] INFO : Unable to send analytic_event_data data, will try again later. Error: 
 [2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7264)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
 [2017-02-03 13:41:26 +0000 johncog-Latitude-E6220 (7252)] INFO : Starting Agent shutdown
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/f1f)
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : New Relic Agent Developer Mode enabled.
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Environment: development
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : No known dispatcher detected.
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Application: My Application (Development)
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing Net instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing ActiveJob instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing Rails 5 view instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Installing Rails 5 Controller instrumentation
+[2017-02-03 14:18:49 +0000 johncog-Latitude-E6220 (12313)] INFO : Finished instrumentation
+[2017-02-03 14:18:50 +0000 johncog-Latitude-E6220 (12344)] INFO : Starting Agent shutdown
+[2017-02-03 14:18:50 +0000 johncog-Latitude-E6220 (12313)] INFO : Starting Agent shutdown
+[2017-02-03 14:18:55 +0000 johncog-Latitude-E6220 (12356)] INFO : Starting the New Relic agent in "development" environment.
+[2017-02-03 14:18:55 +0000 johncog-Latitude-E6220 (12356)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-02-03 14:18:55 +0000 johncog-Latitude-E6220 (12356)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/f1f)
+[2017-02-03 14:18:55 +0000 johncog-Latitude-E6220 (12356)] INFO : New Relic Agent Developer Mode enabled.
+[2017-02-03 14:18:55 +0000 johncog-Latitude-E6220 (12356)] INFO : Environment: development
+[2017-02-03 14:18:55 +0000 johncog-Latitude-E6220 (12356)] INFO : No known dispatcher detected.
+[2017-02-03 14:18:55 +0000 johncog-Latitude-E6220 (12356)] INFO : Application: My Application (Development)
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing Net instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing ActiveJob instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing Rails 5 view instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Installing Rails 5 Controller instrumentation
+[2017-02-03 14:18:56 +0000 johncog-Latitude-E6220 (12356)] INFO : Finished instrumentation
+[2017-02-03 14:18:57 +0000 johncog-Latitude-E6220 (12368)] INFO : Starting Agent shutdown
+[2017-02-03 14:18:58 +0000 johncog-Latitude-E6220 (12356)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-02-03 14:19:12 +0000 johncog-Latitude-E6220 (12356)] INFO : Starting Agent shutdown
