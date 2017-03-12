@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aae35cc8-616f-430f-a951-3d5d47336918" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/2A/2AO8k9aVw37L6Mbn7_2z1lGfnFradTF9UrgCdgftvpk.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/2A/2AO8k9aVw37L6Mbn7_2z1lGfnFradTF9UrgCdgftvpk.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/2P/2PjQ-ROxtzbI5wQMiFVy_cg7dg7y8faE-JRk9YUu_eM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/2P/2PjQ-ROxtzbI5wQMiFVy_cg7dg7y8faE-JRk9YUu_eM.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ml/Mlogxb8bTyCEFoNO_r4shaCMsb9sc1ELKHNrkf7iR-0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/Ml/Mlogxb8bTyCEFoNO_r4shaCMsb9sc1ELKHNrkf7iR-0.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fn/fnjUov_WwX89RI_3GoTTB_mTLDK0rtZJi0fX_RTJ0Do.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/fn/fnjUov_WwX89RI_3GoTTB_mTLDK0rtZJi0fX_RTJ0Do.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oH/oHHRmmdk7PJU-W3_-g-LTYrk7heDTWLlaw5XOx5v7hE.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oH/oHHRmmdk7PJU-W3_-g-LTYrk7heDTWLlaw5XOx5v7hE.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oT/oTmW0elBTr3IgI0S-cD56JeikJ4V0OPxEt_wb9Hkk2Q.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/sprockets/v3.0/oT/oTmW0elBTr3IgI0S-cD56JeikJ4V0OPxEt_wb9Hkk2Q.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.byebug_history" afterPath="$PROJECT_DIR$/.byebug_history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/f1f.iml" afterPath="$PROJECT_DIR$/.idea/f1f.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/measures_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/measures_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/user_thing_lookups_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/user_thing_lookups_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_thing_lookups/index.html.erb" afterPath="$PROJECT_DIR$/app/views/user_thing_lookups/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/newrelic_agent.log" afterPath="$PROJECT_DIR$/log/newrelic_agent.log" />
-    </list>
+    <list default="true" id="aae35cc8-616f-430f-a951-3d5d47336918" name="Default" comment="" />
     <ignored path="f1f.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -135,11 +118,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/measures/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="150">
+              <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -155,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="measures_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="measures_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/measures_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+            <state relative-caret-position="144">
+              <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -187,8 +170,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>@datetime</find>
-      <find>Today</find>
       <find>dat</find>
+      <find>Today</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -226,11 +209,11 @@
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/temp.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/measures/index.html.erb" />
         <option value="$PROJECT_DIR$/lib/tasks/scheduler.rake" />
         <option value="$PROJECT_DIR$/app/controllers/user_thing_lookups_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/user_thing_lookups/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/measures_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/measures/index.html.erb" />
       </list>
     </option>
   </component>
@@ -674,16 +657,16 @@
       <workItem from="1489034946471" duration="1292000" />
       <workItem from="1489127237130" duration="1844000" />
       <workItem from="1489320234185" duration="3000" />
-      <workItem from="1489326050407" duration="2790000" />
+      <workItem from="1489326050407" duration="3080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254760000" />
+    <option name="totallyTimeSpent" value="255050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-2" y="-3" width="2052" height="1132" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21884347" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -692,7 +675,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.4984089" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.309901" sideWeight="0.667996" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.309901" sideWeight="0.667996" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1013,14 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_thing_lookups/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="152" column="61" lean-forward="false" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/user_thing_lookups_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -1029,18 +1004,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/measures/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/measures_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/measures_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/user_thing_lookups/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="1695">
+          <caret line="152" column="61" lean-forward="false" selection-start-line="152" selection-start-column="61" selection-end-line="152" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/measures/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="76" lean-forward="true" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
           <folding />
         </state>
       </provider>

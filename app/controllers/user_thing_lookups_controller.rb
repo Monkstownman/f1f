@@ -9,7 +9,7 @@ class UserThingLookupsController < ApplicationController
 
     start_date = Date.parse "2017-03-12 12:00:00 +0100"
     end_date = Date.today()
-    @dateDifference =  (end_date - start_date).to_i + 2
+    @dateDifference =  (end_date - start_date).to_i
   end
 
   # GET /user_thing_lookups/1
