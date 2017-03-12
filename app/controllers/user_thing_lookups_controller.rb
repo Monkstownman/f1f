@@ -6,6 +6,10 @@ class UserThingLookupsController < ApplicationController
   # GET /user_thing_lookups.json
   def index
     @user_thing_lookups = UserThingLookup.where(user_id: current_user)
+
+    start_date = Date.parse "2017-03-12 12:00:00 +0100"
+    end_date = Date.today()
+    @dateDifference =  (end_date - start_date).to_i + 2
   end
 
   # GET /user_thing_lookups/1
