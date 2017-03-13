@@ -117,7 +117,7 @@ class MeasuresController < ApplicationController
           @seriesIVCStr = @seriesIVCStr + "{name: '" + @corresponding_comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @ivc_value.to_i.to_s + "   },"
 
         elsif @subjectJSON["measures"][0]["name"] == "ivc_diameter_min"
-          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])
+          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])  + dateDifference
           @value = @subjectJSON["measures"][0]["value"]
           if (@comment.to_s.blank? == false)
             @commentPresent = 8
@@ -201,7 +201,7 @@ class MeasuresController < ApplicationController
             @seriesF1FStr = @seriesF1FStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
           end
         elsif @subjectJSON["measures"][0]["name"] == 'Temperature'
-          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])  + dateDifference.days
+          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])  + dateDifference
           @value = @subjectJSON["measures"][0]["value"].tr(',', '')
           if (@comment.to_s.blank? == false)
             @commentPresent = 8
@@ -210,7 +210,7 @@ class MeasuresController < ApplicationController
           end
           @seriesTemperatureStr = @seriesTemperatureStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
         elsif @subjectJSON["measures"][0]["name"] == 'OpenAndClosed'
-          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])  + dateDifference.days
+          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])  + dateDifference
           @value = @subjectJSON["measures"][0]["value"].tr(',', '')
           if @value =="0"
             @oppositeValue = "1"
@@ -225,7 +225,7 @@ class MeasuresController < ApplicationController
           @seriesOpenAndClosedStr = @seriesOpenAndClosedStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @oppositeValue + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
           @seriesOpenAndClosedStr = @seriesOpenAndClosedStr + "{name: '" + @comment + "', x: Date.UTC(" + @datetime.year.to_s + ", " + (@datetime.month - 1).to_s + ", " + @datetime.day.to_s + ", " + @datetime.hour.to_s + ", " + @datetime.minute.to_s + ", " + @datetime.second.to_s + "), y: " + @value + ", marker: {radius: " + @commentPresent.to_s + "} , events: { click: function() { window.open('../measures/" + @id.to_s + "/edit','_self'); }} },"
         elsif @subjectJSON["measures"][0]["name"] == 'Motion'
-          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])  + dateDifference.days
+          @datetime = DateTime.parse(@subjectJSON["measures"][0]["time"])  + dateDifference
           @value = @subjectJSON["measures"][0]["value"].tr(',', '')
           if (@comment.to_s.blank? == false)
             @commentPresent = 8

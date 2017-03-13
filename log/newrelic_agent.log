@@ -15796,3 +15796,84 @@ Could not load database configuration. No such file - ["config/database.yml"]
 [2017-03-12 18:17:11 +0000 localhost (2725)] INFO : Starting Agent shutdown
 [2017-03-12 18:17:11 +0000 localhost (2725)] INFO : Unable to send metric_data data, will try again later. Error: 
 [2017-03-12 18:17:11 +0000 localhost (2725)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 18:42:55 +0000 localhost (15280)] INFO : Starting the New Relic agent in "development" environment.
+[2017-03-12 18:42:55 +0000 localhost (15280)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-03-12 18:42:55 +0000 localhost (15280)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/f1f)
+[2017-03-12 18:42:55 +0000 localhost (15280)] INFO : New Relic Agent Developer Mode enabled.
+[2017-03-12 18:42:55 +0000 localhost (15280)] INFO : Environment: development
+[2017-03-12 18:42:55 +0000 localhost (15280)] INFO : No known dispatcher detected.
+[2017-03-12 18:42:55 +0000 localhost (15280)] INFO : Application: My Application (Development)
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing ActiveJob instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing Net instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing Rails 5 Controller instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Installing Rails 5 view instrumentation
+[2017-03-12 18:42:56 +0000 localhost (15280)] INFO : Finished instrumentation
+[2017-03-12 18:42:58 +0000 localhost (15280)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-03-12 18:43:59 +0000 localhost (15280)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 18:43:59 +0000 localhost (15280)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 18:44:58 +0000 localhost (15280)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 18:44:58 +0000 localhost (15280)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 18:45:58 +0000 localhost (15280)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 18:45:58 +0000 localhost (15280)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 18:46:17 +0000 localhost (15280)] INFO : Starting Agent shutdown
+[2017-03-12 18:46:17 +0000 localhost (15280)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 18:46:17 +0000 localhost (15280)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:36:23 +0000 localhost (8587)] INFO : Starting the New Relic agent in "development" environment.
+[2017-03-12 19:36:23 +0000 localhost (8587)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-03-12 19:36:23 +0000 localhost (8587)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/f1f)
+[2017-03-12 19:36:23 +0000 localhost (8587)] INFO : New Relic Agent Developer Mode enabled.
+[2017-03-12 19:36:23 +0000 localhost (8587)] INFO : Environment: development
+[2017-03-12 19:36:23 +0000 localhost (8587)] INFO : No known dispatcher detected.
+[2017-03-12 19:36:23 +0000 localhost (8587)] INFO : Application: My Application (Development)
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing ActiveJob instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing Net instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing Rails 5 Controller instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Installing Rails 5 view instrumentation
+[2017-03-12 19:36:24 +0000 localhost (8587)] INFO : Finished instrumentation
+[2017-03-12 19:36:26 +0000 localhost (8587)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-03-12 19:37:27 +0000 localhost (8587)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:37:27 +0000 localhost (8587)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:38:27 +0000 localhost (8587)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:38:27 +0000 localhost (8587)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:39:27 +0000 localhost (8587)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:39:27 +0000 localhost (8587)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:39:40 +0000 localhost (8587)] INFO : Starting Agent shutdown
+[2017-03-12 19:39:40 +0000 localhost (8587)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:39:40 +0000 localhost (8587)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:40:03 +0000 localhost (19324)] INFO : Starting the New Relic agent in "development" environment.
+[2017-03-12 19:40:03 +0000 localhost (19324)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2017-03-12 19:40:03 +0000 localhost (19324)] INFO : Reading configuration from config/newrelic.yml (/home/johncog/f1f)
+[2017-03-12 19:40:03 +0000 localhost (19324)] INFO : New Relic Agent Developer Mode enabled.
+[2017-03-12 19:40:03 +0000 localhost (19324)] INFO : Environment: development
+[2017-03-12 19:40:03 +0000 localhost (19324)] INFO : No known dispatcher detected.
+[2017-03-12 19:40:03 +0000 localhost (19324)] INFO : Application: My Application (Development)
+[2017-03-12 19:40:04 +0000 localhost (19324)] INFO : Installing ActiveJob instrumentation
+[2017-03-12 19:40:04 +0000 localhost (19324)] INFO : Installing Net instrumentation
+[2017-03-12 19:40:04 +0000 localhost (19324)] INFO : Installing deferred Rack::Builder instrumentation
+[2017-03-12 19:40:04 +0000 localhost (19324)] INFO : Installing Rack::Builder middleware instrumentation
+[2017-03-12 19:40:05 +0000 localhost (19324)] INFO : Installing ActiveRecord 5 instrumentation
+[2017-03-12 19:40:05 +0000 localhost (19324)] INFO : Installing Rails 3+ middleware instrumentation
+[2017-03-12 19:40:05 +0000 localhost (19324)] INFO : Installing Rails 5 Action Cable instrumentation
+[2017-03-12 19:40:05 +0000 localhost (19324)] INFO : Installing Rails 5 Controller instrumentation
+[2017-03-12 19:40:05 +0000 localhost (19324)] INFO : Installing Rails 5 view instrumentation
+[2017-03-12 19:40:05 +0000 localhost (19324)] INFO : Finished instrumentation
+[2017-03-12 19:40:07 +0000 localhost (19324)] INFO : Reporting to: https://rpm.newrelic.com/accounts/1352793/applications/23640181
+[2017-03-12 19:41:07 +0000 localhost (19324)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:41:07 +0000 localhost (19324)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:42:07 +0000 localhost (19324)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:42:07 +0000 localhost (19324)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:43:07 +0000 localhost (19324)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:43:07 +0000 localhost (19324)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
+[2017-03-12 19:43:14 +0000 localhost (19324)] INFO : Starting Agent shutdown
+[2017-03-12 19:43:14 +0000 localhost (19324)] INFO : Unable to send metric_data data, will try again later. Error: 
+[2017-03-12 19:43:14 +0000 localhost (19324)] INFO : NewRelic::Agent::LicenseException: Invalid license key, please visit support.newrelic.com
